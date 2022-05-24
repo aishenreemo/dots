@@ -1,0 +1,88 @@
+@import "colors.rasi"
+
+configuration {
+    show-icons:           true;
+    display-drun:         "Applications";
+    drun-display-format:  "{name}";
+    disable-history:      true;
+    sidebar-mode:         false;
+}
+
+window {
+    width:                50%;
+    height:               50%;
+    background-color:     @black-bright;
+    border:               3px;
+    border-color:         @blue;
+}
+
+entry {
+    background-color:     @black-bright;
+    text-color:           @cyan-bright;
+    placeholder-color:    @white;
+    placeholder:          "   Type here to search...";
+    expand:               true;
+    horizontal-align:     0.5;
+    padding:              10px;
+    blink:                true;
+    border:               0px 0px 2px 0px;
+    border-radius:        1px;
+    border-color:         @cyan;
+}
+
+inputbar {
+    children:             [ entry ];
+    text-color:           @black;
+    expand:               false;
+    margin:               0px;
+}
+
+listview {
+    background-color:     transparent;
+    columns:              3;
+    dynamic:              true;
+    spacing:              7px;
+    scrollbar:            false;
+    border:               0px;
+}
+
+mainbox {
+    background-color:     @black-bright;
+    text-color:           transparent;
+    children:             [ inputbar, listview ];
+    padding:              7px;
+    spacing:              5px;
+}
+
+element-icon {
+    horizontal-align:     0.5;
+    vertical-align:       0.5;
+    size:                 7%;
+    border:               2px;
+    border-color:         transparent;
+    background-color:     transparent;
+    margin:               0px;
+}
+
+element-text {
+    expand:               false;
+    horizontal-align:     0.5;
+    vertical-align:       0.5;
+    background-color:     transparent;
+    text-color:           inherit;
+}
+
+element {
+    children:             [ element-text, element-icon ];
+    orientation:          vertical;
+    border-radius:        1px;
+    padding:              5px;
+}
+
+element selected {
+    border:               0px 0px 3px 0px;
+    border-color:         @blue;
+    border-radius:        3px;
+    background-color:     @white;
+    text-color:           @black;
+}

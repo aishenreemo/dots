@@ -1,0 +1,42 @@
+#!/bin/sh
+
+workspace_data() {
+	local length=4
+	local i=0
+
+	declare -A contents
+
+	local focused_names=`bspc query -D -d focused --names`
+	local buttons=""
+
+	while [ "$i" -lt $length ]; do 
+		local content="◇"
+		
+		if echo "$focused_names" | grep -q `expr $i + 1`; then
+			content="◆"
+		fi
+
+		buttons="$buttons (button"
+		buttons="$buttons :onclick \"bspc desktop -f $(expr $i + 1)\""
+		buttons="$buttons :class \"button b$i\" \"$content\")"
+
+		i=`expr $i + 1`
+	done
+
+    	out="(box"
+    	out="$out :class \"workspaces\""
+    	out="$out :orientation \"h\""
+    	out="$out :halign \"start\""
+    	out="$out :valign \"center\""
+    	out="$out :space-evenly \"false\""
+    	out="$out :spacing \"5\""
+    	out="$out $buttons)"
+
+    	echo "$out"
+}
+
+workspace_data
+bspc subscribe desktop node_transfer | while read -r _ ; do
+	workspace_data
+done
+

@@ -1,0 +1,103 @@
+#!/bin/sh
+
+get_default_color() {
+	case $1 in
+		0)  echo "#151a1c";;
+		1)  echo "#801a31";;
+		2)  echo "#397550";;
+		3)  echo "#cfb911";;
+		4)  echo "#223b4e";;
+		5)  echo "#9f1e4f";;
+		6)  echo "#6dbbaf";;
+		7)  echo "#ebfdff";;
+		8)  echo "#10141e";;
+		9)  echo "#d22a51";;
+		10) echo "#58ae79";;
+		11) echo "#f1df56";;
+		12) echo "#3b6788";;
+		13) echo "#d83070";;
+		14) echo "#a9d7d0";;
+		15) echo "#f5feff";;
+	esac
+}
+
+ret_color_name() {
+	case `expr $1 % 8` in
+		0) echo black;;
+		1) echo red;;
+		2) echo green;;
+		3) echo yellow;;
+		4) echo blue;;
+		5) echo magenta;;
+		6) echo cyan;;
+		7) echo white;;
+	esac
+}
+
+ret_eval_script() {	
+	local output="sed"
+	local prefix="TDC_"
+	local suffix_bright="_BRIGHT"
+
+	for normal_index in {0..7}; do
+		local bright_index=$(expr $normal_index + 8)
+		local color_name=$(ret_color_name $normal_index | tr "[a-z]" "[A-Z]")
+		local bright=$(xgetres "color$bright_index")
+		local normal=$(xgetres "color$normal_index")
+
+		if xrdb -query | grep -vq "color$bright_index"; then
+			bright=$(get_default_color $bright_index)
+		fi
+
+		if xrdb -query | grep -vq "color$normal_index"; then
+			normal=$(get_default_color $normal_index)
+		fi
+
+		# bright color
+		output="${output} -e \"s/${prefix}"
+		output="${output}${color_name}"
+		output="${output}${suffix_bright}/"
+		output="${output}${bright}/g\""
+		# normal color
+		output="${output} -e \"s/${prefix}"
+		output="${output}${color_name}/"
+		output="${output}${normal}/g\""
+	done
+
+	echo $output $1
+}
+
+make_directories() {
+	mkdir -p $HOME/.config/
+	mkdir -p $HOME/.local/bin/
+	mkdir -p $HOME/.local/share/fonts
+}
+
+copy_config() {
+	cp ./etc/misc/{.xinitrc,.Xresources,.zshrc} $HOME
+	cp -r ./etc/fonts/* $HOME/.local/share/fonts
+	cp -r ./cfg/* $HOME/.config
+	cp -r ./bin/* $HOME/.local/bin
+}
+
+paths=( "./cfg/eww/_variables.scss" "./cfg/alacritty/alacritty.yml" "./cfg/rofi/colors.rasi" )
+gen_conf() {
+	for p in "${paths[@]}"; do
+		local back="${p}.backup"
+		cp $p $back
+		ret_eval_script $back | sh > $p
+	done
+}
+
+clean() {
+	for p in "${paths[@]}"; do
+		local back="${p}.backup"
+		mv $back $p
+	done
+}
+
+gen_conf
+make_directories
+copy_config
+fc-cache
+clean

@@ -1,0 +1,51 @@
+@import "variables";
+
+window {
+    color:                  $white;
+    background-color:       transparent;
+
+    button {
+        background-image:   linear-gradient(transparent, transparent);
+        border:             none;
+        box-shadow:         none;
+    }
+
+    .workspaces > button {
+        color:              $white;
+    }
+    .workspaces > button:hover {
+        color:              $white-bright;
+    }
+
+    .menu {
+        background-color:   transparent;
+        border:             none;
+        box-shadow:         none;
+    }
+    .menu > button {
+        font-size:          1.4rem;
+        background-image:   linear-gradient(transparent, transparent);
+    }
+
+
+    button.logout-btn {
+        color:              $green;
+    }
+    button.logout-btn:hover {
+        color:              $green-bright;
+    }
+
+    button.reboot-btn {
+        color:              $yellow;
+    }
+    button.reboot-btn:hover {
+        color:              $yellow-bright;
+    }
+
+    button.shutdown-btn {
+        color:              $red;
+    }
+    button.shutdown-btn:hover {
+        color:              $red-bright;
+    }
+}

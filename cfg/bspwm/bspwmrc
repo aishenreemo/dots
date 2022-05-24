@@ -1,0 +1,32 @@
+#! /bin/sh
+
+sxhkd &
+picom &
+dunst &
+eww open bar &
+
+## handle bar
+bspc subscribe node_state | while read -r _ _ _ _ state flag; do
+    if [ "$state" != "fullscreen" ]; then
+        continue
+    fi
+
+    if [ "$flag" == on ]; then
+        xdo lower -N eww-bar
+    else
+        xdo raise -N eww-bar
+    fi
+done &
+
+# hsetroot -center "$HOME/.config/bspwm/its_raining_after_all.png"
+hsetroot -solid $(xgetres color8)
+
+bspc monitor -d                                                   {1..4}
+
+bspc config border_width                                          3
+bspc config window_gap                                            12
+bspc config split_ratio                                           0.62
+bspc config borderless_monocle                                    true
+
+bspc config focused_border_color                                  $(xgetres color12)
+bspc config normal_border_color                                   $(xgetres color4)

@@ -1,0 +1,55 @@
+# terminal emulator
+super + Return
+	alacritty	
+
+# kill focused window
+super + c
+	bspc node -k
+
+# exit bspwm
+super + Escape 
+	bspc quit
+
+# open browser
+super + b
+	firefox
+
+# open app menu
+super + a
+	rofi -disable-history -modi "drun" -show "drun"
+
+# screenshot to clipboard
+Print
+	maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png
+
+# focus next/prev window
+super + {_,shift + }f
+    bspc node -f {next,prev}.local.!hidden.window
+
+# move window/go to workspace #
+super + {_,shift + }{1-4}
+	bspc {desktop -f,node -d} '^{1-4}'
+
+# resize window
+super + alt + {Left,Down,Up,Right}
+	bspc node -z {right -1 0,top 0 1,bottom 0 -1,left 1 0}
+
+super + ctrl + {Left,Down,Up,Right}
+	bspc node -z {left -1 0,bottom 0 1,top 0 -1,right 1 0}
+
+super + shift + alt + {Left,Down,Up,Right}
+	bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
+
+super + shift + ctrl + {Left,Down,Up,Right}
+	bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 10 0}
+
+# move window 
+super + {Left,Down,Up,Right}
+	bspc node -v {-1 0,0 1,0 -1,1 0}
+
+super + shift + {Left,Down,Up,Right}
+	bspc node -v {-10 0,0 10,0 -10,10 0}
+
+# set window state
+super + {alt + t,shift + t,space,alt + f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}

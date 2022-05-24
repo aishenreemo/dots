@@ -1,0 +1,59 @@
+(defwidget workspaces [] (literal :content workspace))
+(deflisten workspace "scripts/get_workspaces_data")
+
+(defwindow bar
+    :monitor     0
+    :stacking    "bg"
+    :windowtype  "dock"
+    :wm-ignore   false
+    :vexpand     false
+    :hexpand     false
+    :reserve     (struts :distance "50px" :side "top")
+    :geometry    (geometry
+        :x       "0%"
+        :y       "4px"
+        :width   "99%"
+        :height  "40px"
+        :anchor  "top center"
+    )
+
+    (bar_widget)
+)
+
+(defwidget bar_widget []
+    (box 
+        :class        "bar"
+        :orientation  "h"
+
+        (left)
+        (center)
+        (right)
+    )
+)
+
+(defwidget left [] (box))
+
+(defwidget center []
+    (box 
+        :orientation  "h"
+        :valign       "center"
+        :halign       "center"
+        :hexpand      false
+
+        (workspaces)
+    )
+)
+
+(defwidget right []
+    (box
+        :valign       "center"
+        :halign       "end"
+        :orientation  "h"
+        :class        "menu"
+        :spacing      10
+
+        (button :class "logout-btn" :tooltip "Logout" :onclick "bspc quit" "")
+        (button :class "reboot-btn" :tooltip "Reboot" :onclick "systemctl reboot" "")
+        (button	:class "shutdown-btn" :tooltip "Shutdown" :onclick "systemctl poweroff" "")
+    )
+)

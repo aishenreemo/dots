@@ -1,0 +1,120 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+env:
+  TERM:                                                             alacritty
+
+window:
+  padding:
+    x:                                                              15
+    y:                                                              15
+
+  dynamic_padding:                                                  true
+  decorations:                                                      none
+  opacity:                                                          0.95
+  startup_mode:                                                     Windowed
+
+
+scrolling:
+  history:                                                          10000
+  multiplier:                                                       2
+
+font:
+  normal:
+    family:                                                         monospace
+    style:                                                          Regular
+
+  bold:
+    family:                                                         monospace
+    style:                                                          Bold
+
+  italic:
+    family:                                                         monospace
+    style:                                                          Italic
+
+  bold_italic:
+    family:                                                         monospace
+    style:                                                          Bold Italic
+
+draw_bold_text_with_bright_colors:                                  true
+
+colors:
+  primary:
+    foreground:                                                     'TDC_WHITE'
+    background:                                                     'TDC_BLACK_BRIGHT'
+    dim_foreground:                                                 '#E6F3F4'
+    bright_foreground:                                              '#FAFEFF'
+
+  cursor:
+    text:                                                           CellBackground
+    cursor:                                                         CellForeground
+
+  vi_mode_cursor:
+    text:                                                           CellBackground
+    cursor:                                                         CellForeground
+
+  search:
+    matches:
+      foreground:                                                   '#000000'
+      background:                                                   '#ffffff'
+    focused_match:
+      foreground:                                                   '#ffffff'
+      background:                                                   '#000000'
+
+    bar:
+      background:                                                   '#F5FEFF'
+      foreground:                                                   '#232A3F'
+
+  bright: 
+    black:                                                          'TDC_BLACK_BRIGHT'
+    red:                                                            'TDC_RED_BRIGHT'
+    green:                                                          'TDC_GREEN_BRIGHT'
+    yellow:                                                         'TDC_YELLOW_BRIGHT'
+    blue:                                                           'TDC_BLUE_BRIGHT'
+    magenta:                                                        'TDC_MAGENTA_BRIGHT'
+    cyan:                                                           'TDC_CYAN_BRIGHT'
+    white:                                                          'TDC_WHITE_BRIGHT'
+
+  normal:
+    black:                                                          'TDC_BLACK'
+    red:                                                            'TDC_RED'
+    green:                                                          'TDC_GREEN'
+    yellow:                                                         'TDC_YELLOW'
+    blue:                                                           'TDC_BLUE'
+    magenta:                                                        'TDC_MAGENTA'
+    cyan:                                                           'TDC_CYAN'
+    white:                                                          'TDC_WHITE'
+
+  #indexed_colors:                                                  []
+
+  transparent_background_colors:                                    true
+
+selection:
+  semantic_escape_chars:                                            ",│`|:\"' ()[]{}<>\t"
+  save_to_clipboard:                                                true
+
+cursor:
+  style:
+    blinking:                                                       On
+
+  #vi_mode_style:                                                   None
+
+  blink_interval:                                                   750
+  unfocused_hollow:                                                 true
+  thickness:                                                        0.15
+
+live_config_reload:                                                 true
+working_directory:                                                  None
+
+alt_send_esc:                                                       true
+
+mouse:
+  double_click:                                                     { threshold:               300 }
+  triple_click:                                                     { threshold:               300 }
+  hide_when_typing:                                                 false
+
+debug:
+  persistent_logging:                                               false
+  log_level:                                                        Warn
+  print_events:                                                     true
+  highlight_damage:                                                 false
+
