@@ -2,28 +2,40 @@
 (deflisten workspace "scripts/get_workspaces_data")
 
 (defwindow bar
-    :monitor     0
-    :stacking    "bg"
-    :windowtype  "dock"
-    :wm-ignore   false
-    :vexpand     false
-    :hexpand     false
-    :reserve     (struts :distance "50px" :side "top")
-    :geometry    (geometry
-        :x       "0%"
-        :y       "4px"
-        :width   "99%"
-        :height  "40px"
-        :anchor  "top center"
+    :monitor               0
+    :stacking              "bg"
+    :windowtype            "dock"
+    :wm-ignore             false
+    :vexpand               false
+    :hexpand               false
+    :reserve              (struts :distance "50px" :side "top")
+    :geometry             (geometry
+        :x                 "0%"
+        :y                 "4px"
+        :width             "99%"
+        :height            "40px"
+        :anchor            "top center"
     )
 
     (bar_widget)
 )
 
+(defwindow menu
+    :geometry             (geometry
+        :width             "35%"
+        :height            "15%"
+        :anchor            "center"
+    )
+
+    (menu_widget)
+)
+
+(defvar menu_show false)
+
 (defwidget bar_widget []
-    (box 
-        :class        "bar"
-        :orientation  "h"
+    (box
+        :class             "bar"
+        :orientation       "h"
 
         (left)
         (center)
@@ -31,14 +43,27 @@
     )
 )
 
+(defwidget menu_widget []
+    (box
+        :class             "menu-window"
+        (revealer
+            :transition    "crossfade"
+            :reveal        menu_show
+            :duration      "100ms"
+
+            (menu_ops)
+        )
+    )
+)
+
 (defwidget left [] (box))
 
 (defwidget center []
-    (box 
-        :orientation  "h"
-        :valign       "center"
-        :halign       "center"
-        :hexpand      false
+    (box
+        :orientation       "h"
+        :valign            "center"
+        :halign            "center"
+        :hexpand           false
 
         (workspaces)
     )
@@ -46,14 +71,41 @@
 
 (defwidget right []
     (box
-        :valign       "center"
-        :halign       "end"
-        :orientation  "h"
-        :class        "menu"
-        :spacing      10
+        :valign            "center"
+        :halign            "end"
+        :orientation       "h"
+        :class             "right"
+        :spacing           10
 
-        (button :class "logout-btn" :tooltip "Logout" :onclick "bspc quit" "")
-        (button :class "reboot-btn" :tooltip "Reboot" :onclick "systemctl reboot" "")
-        (button	:class "shutdown-btn" :tooltip "Shutdown" :onclick "systemctl poweroff" "")
+        (button
+            :class         "menu-btn"
+            :tooltip       "Menu"
+            :onclick       "sh scripts/open_menu" "☰"
+        )
+    )
+)
+
+(defwidget menu_ops []
+    (box
+        :orientation       "h"
+        :valign            "center"
+        :class             "menu-ops"
+        :spacing           30
+
+        (button
+            :class         "logout-btn"
+            :tooltip       "Logout"
+            :onclick       "bspc quit" ""
+        )
+        (button
+            :class         "reboot-btn"
+            :tooltip       "Reboot"
+            :onclick       "systemctl reboot" ""
+        )
+        (button
+            :class         "shutdown-btn"
+            :tooltip       "Shutdown"
+            :onclick       "systemctl poweroff" ""
+        )
     )
 )

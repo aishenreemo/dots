@@ -10,10 +10,10 @@ workspace_data() {
 	local buttons=""
 
 	while [ "$i" -lt $length ]; do 
-		local content="◇"
+		local content="○"
 		
 		if echo "$focused_names" | grep -q `expr $i + 1`; then
-			content="◆"
+			content="●"
 		fi
 
 		buttons="$buttons (button"
