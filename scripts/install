@@ -1,5 +1,12 @@
 #!/bin/sh
 
+paths=( 
+	"./cfg/eww/_variables.scss" 
+	"./cfg/alacritty/alacritty.yml" 
+	"./cfg/rofi/colors.rasi" 
+	"./cfg/dunst/dunstrc" 
+)
+
 get_default_color() {
 	case $1 in
 		0)  echo "#151a1c";;
@@ -81,7 +88,6 @@ copy_config() {
 	cp -r ./bin/* $HOME/.local/bin
 }
 
-paths=( "./cfg/eww/_variables.scss" "./cfg/alacritty/alacritty.yml" "./cfg/rofi/colors.rasi" )
 gen_conf() {
 	for p in "${paths[@]}"; do
 		local back="${p}.backup"

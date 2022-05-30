@@ -1,9 +1,9 @@
 #! /bin/sh
 
-sxhkd &
-picom &
-dunst &
 eww open bar &
+pgrep -x sxhkd > /dev/null || sxhkd &
+dunst --config $HOME/.config/dunst/dunstrc &
+picom --config $HOME/.config/picom.conf &
 
 ## handle bar
 bspc subscribe node_state | while read -r _ _ _ _ state flag; do
