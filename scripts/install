@@ -52,11 +52,8 @@ ret_eval_script() {
 		local bright=$(xgetres "color$bright_index")
 		local normal=$(xgetres "color$normal_index")
 
-		if xrdb -query | grep -vq "color$bright_index"; then
+		if ! xrdb -query > /dev/null; then
 			bright=$(get_default_color $bright_index)
-		fi
-
-		if xrdb -query | grep -vq "color$normal_index"; then
 			normal=$(get_default_color $normal_index)
 		fi
 
@@ -85,7 +82,7 @@ copy_config() {
 	cp ./etc/misc/{.xinitrc,.Xresources,.zshrc} $HOME
 	cp -r ./etc/fonts/* $HOME/.local/share/fonts
 	cp -r ./cfg/* $HOME/.config
-	cp -r ./bin/* $HOME/.local/bin
+	cp -r ./bin/* $HOME/.local/bin 2> /dev/null
 }
 
 gen_conf() {
