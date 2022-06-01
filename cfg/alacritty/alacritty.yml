@@ -35,6 +35,10 @@ font:
     family:                                                         "Iosevka Nerd Font"
     style:                                                          Bold Italic
 
+  offset:
+    x:                                                              1
+    y:                                                              0
+
 draw_bold_text_with_bright_colors:                                  true
 
 colors:
