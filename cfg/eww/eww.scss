@@ -28,9 +28,9 @@ window {
     }
 
     .menu-window {
-	background:         $black-bright;
-	border:             2px solid $blue-bright;
+	background:         $background;
 	padding:            20px;
+	border:		    none;
     }
 
     .menu-ops > button {
@@ -43,23 +43,23 @@ window {
         color:              $green;
     }
     button.logout-btn:hover {
-        background-image:   linear-gradient($green-bright, $green-bright);
-	color: 		    $black-bright;
+        background-image:   linear-gradient($green, $green);
+	color: 		    $background;
     }
 
     button.reboot-btn {
         color:              $yellow;
     }
     button.reboot-btn:hover {
-        background-image:   linear-gradient($yellow-bright, $yellow-bright);
-	color: 		    $black-bright;
+        background-image:   linear-gradient($yellow, $yellow);
+	color: 		    $background;
     }
 
     button.shutdown-btn {
         color:              $red;
     }
     button.shutdown-btn:hover {
-        background-image:   linear-gradient($red-bright, $red-bright);
-	color: 		    $black-bright;
+        background-image:   linear-gradient($red, $red);
+	color: 		    $background;
     }
 }
