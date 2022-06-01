@@ -29,8 +29,8 @@ ret_eval_script() {
 	local prefix="TDC_"
 	local suffix_bright="_BRIGHT"
 
-	local bg=$(xgetres "background" 2> /dev/null || get_default_color background)
-	local fg=$(xgetres "foreground" 2> /dev/null || get_default_color foreground)
+	local bg=$(xgetres "background" 2> /dev/null || get_default_color "*background")
+	local fg=$(xgetres "foreground" 2> /dev/null || get_default_color "*foreground")
 
 	output="${output} -e \"s/${prefix}FOREGROUND/$fg/g\""
 	output="${output} -e \"s/${prefix}BACKGROUND/$bg/g\""

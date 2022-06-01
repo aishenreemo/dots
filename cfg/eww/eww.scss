@@ -1,30 +1,25 @@
 @import "variables";
 
 window {
-    color:                  $foreground;
-    background-color:       $background;
+    color:                  $background;
+    background-color:       transparent;
 
     button {
         background-image:   linear-gradient(transparent, transparent);
         border:             none;
         box-shadow:         none;
+	font-size:          1.3rem;
     }
 
     .w-button {
-	background-image:   linear-gradient($background, $background);
-	color:		    $foreground;
-	border-radius:	    75%;
-    }
-
-    .w-button.w-button-active {
-	background-image:   linear-gradient($foreground, $foreground);
-	color:		    $background;
+        background-image:   linear-gradient(transparent, transparent);
+	color:              $foreground;
+	border-radius:	    50%;
     }
 
     .menu-btn {
-	color:              $background;
-	background-image:   linear-gradient($foreground, $foreground);
-	border-radius:	    75%;
+	border-radius:	    50%;
+	color:              $foreground;
     }
 
     .menu-window {
