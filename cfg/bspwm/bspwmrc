@@ -21,8 +21,8 @@ bspc subscribe node_state | while read -r _ _ _ _ state flag; do
     fi
 done &
 
-# hsetroot -center "$HOME/.config/bspwm/its_raining_after_all.png"
-hsetroot -solid $(xgetres color8)
+hsetroot -center "$HOME/.config/bspwm/assets/wallpaper.png"
+# hsetroot -solid $(xgetres color8)
 
 bspc monitor -d                                                   {1..4}
 
