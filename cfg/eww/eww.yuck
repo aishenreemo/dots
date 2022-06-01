@@ -80,7 +80,7 @@
         (button
             :class         "menu-btn"
             :tooltip       "Menu"
-            :onclick       "sh scripts/open_menu" "☰"
+            :onclick       "sh scripts/open_menu &" "☰"
         )
     )
 )
