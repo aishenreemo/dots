@@ -49,8 +49,8 @@ ret_eval_script() {
 	for normal_index in {0..7}; do
 		local bright_index=$(expr $normal_index + 8)
 		local color_name=$(ret_color_name $normal_index | tr "[a-z]" "[A-Z]")
-		local bright=$(xgetres "color$bright_index")
-		local normal=$(xgetres "color$normal_index")
+		local bright=$(xgetres "color$bright_index" 2> /dev/null)
+		local normal=$(xgetres "color$normal_index" 2> /dev/null)
 
 		if ! xrdb -query > /dev/null; then
 			bright=$(get_default_color $bright_index)
