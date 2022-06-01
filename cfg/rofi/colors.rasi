@@ -17,14 +17,14 @@
     cyan:                         TDC_CYAN;
     white:                        TDC_WHITE;
 
-    background:                   @black-bright;
-    foreground:                   @white-bright;
-    normal-background:            @black-bright;
-    normal-foreground:            @white;
-    alternate-normal-background:  @black-bright;
-    alternate-normal-foreground:  @white;
-    bg:                           @black-bright;
-    fg:                           @white-bright;
-    selected-normal-background:   @white;
-    selected-normal-foreground:   @black;
+    foreground:			  TDC_FOREGROUND;
+    background:                   TDC_BACKGROUND;
+    bg:                           @background;
+    fg:                           @foreground;
+    normal-background:            @bg;
+    normal-foreground:            @fg;
+    alternate-normal-background:  @bg;
+    alternate-normal-foreground:  @fg;
+    selected-normal-background:   @fg;
+    selected-normal-foreground:   @bg;
 }

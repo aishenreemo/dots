@@ -11,15 +11,13 @@ configuration {
 window {
     width:                50%;
     height:               50%;
-    background-color:     @black-bright;
-    border:               3px;
-    border-color:         @blue;
+    background-color:     @bg;
 }
 
 entry {
-    background-color:     @black-bright;
-    text-color:           @cyan-bright;
-    placeholder-color:    @white;
+    background-color:     @bg;
+    text-color:           @fg;
+    placeholder-color:    @cyan;
     placeholder:          "   Type here to search...";
     expand:               true;
     horizontal-align:     0.5;
@@ -27,12 +25,12 @@ entry {
     blink:                true;
     border:               0px 0px 2px 0px;
     border-radius:        1px;
-    border-color:         @cyan;
+    border-color:         @fg;
 }
 
 inputbar {
     children:             [ entry ];
-    text-color:           @black;
+    text-color:           @fg;
     expand:               false;
     margin:               0px;
 }
@@ -47,7 +45,7 @@ listview {
 }
 
 mainbox {
-    background-color:     @black-bright;
+    background-color:     @bg;
     text-color:           transparent;
     children:             [ inputbar, listview ];
     padding:              7px;
