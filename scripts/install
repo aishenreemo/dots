@@ -8,24 +8,7 @@ paths=(
 )
 
 get_default_color() {
-	case $1 in
-		0)  echo "#151a1c";;
-		1)  echo "#801a31";;
-		2)  echo "#397550";;
-		3)  echo "#cfb911";;
-		4)  echo "#223b4e";;
-		5)  echo "#9f1e4f";;
-		6)  echo "#6dbbaf";;
-		7)  echo "#ebfdff";;
-		8)  echo "#10141e";;
-		9)  echo "#d22a51";;
-		10) echo "#58ae79";;
-		11) echo "#f1df56";;
-		12) echo "#3b6788";;
-		13) echo "#d83070";;
-		14) echo "#a9d7d0";;
-		15) echo "#f5feff";;
-	esac
+	cat "./etc/misc/.Xresources" | grep $1 -m 1 | cut -f 2
 }
 
 ret_color_name() {
@@ -45,6 +28,12 @@ ret_eval_script() {
 	local output="sed"
 	local prefix="TDC_"
 	local suffix_bright="_BRIGHT"
+
+	local bg=$(xgetres "background" 2> /dev/null || get_default_color background)
+	local fg=$(xgetres "foreground" 2> /dev/null || get_default_color foreground)
+
+	output="${output} -e \"s/${prefix}FOREGROUND/$fg/g\""
+	output="${output} -e \"s/${prefix}BACKGROUND/$bg/g\""
 
 	for normal_index in {0..7}; do
 		local bright_index=$(expr $normal_index + 8)

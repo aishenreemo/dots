@@ -1,8 +1,8 @@
 @import "variables";
 
 window {
-    color:                  $white;
-    background-color:       transparent;
+    color:                  $foreground;
+    background-color:       $background;
 
     button {
         background-image:   linear-gradient(transparent, transparent);
@@ -10,11 +10,21 @@ window {
         box-shadow:         none;
     }
 
-    .workspaces > button {
-        color:              $white;
+    .w-button {
+	background-image:   linear-gradient($background, $background);
+	color:		    $foreground;
+	border-radius:	    75%;
     }
-    .workspaces > button:hover {
-        color:              $white-bright;
+
+    .w-button.w-button-active {
+	background-image:   linear-gradient($foreground, $foreground);
+	color:		    $background;
+    }
+
+    .menu-btn {
+	color:              $background;
+	background-image:   linear-gradient($foreground, $foreground);
+	border-radius:	    75%;
     }
 
     .menu-window {

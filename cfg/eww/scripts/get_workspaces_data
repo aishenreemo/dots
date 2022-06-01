@@ -11,14 +11,16 @@ workspace_data() {
 
 	while [ "$i" -lt $length ]; do 
 		local content="○"
+		local class="w-button b$i"
 		
 		if echo "$focused_names" | grep -q `expr $i + 1`; then
 			content="●"
+			class="${class} w-button-active"
 		fi
 
 		buttons="$buttons (button"
 		buttons="$buttons :onclick \"bspc desktop -f $(expr $i + 1)\""
-		buttons="$buttons :class \"button b$i\" \"$content\")"
+		buttons="$buttons :class \"$class\" \"$content\")"
 
 		i=`expr $i + 1`
 	done
@@ -29,7 +31,7 @@ workspace_data() {
     	out="$out :halign \"start\""
     	out="$out :valign \"center\""
     	out="$out :space-evenly \"false\""
-    	out="$out :spacing \"5\""
+    	out="$out :spacing \"15\""
     	out="$out $buttons)"
 
     	echo "$out"

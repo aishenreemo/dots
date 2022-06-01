@@ -2,6 +2,9 @@
     <h1><samp>ツユ (TUYU) Dots [WIP]</samp></h1>
     <p>Configuration files to personalize my own system, feel open to browse!</p>
 </div>
+
+<img src="assets/images/preview.png" alt="Rice Showcase" align="right" width="400px">
+
 <p>Here are the information about my setup:</p>
 
 | **Operating System:**    | [Arch Linux](https://archlinux.org)                 |
