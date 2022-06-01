@@ -1,1 +1,13 @@
-xrdb -query | grep $1 -m 1 | cut -f 2 2> /dev/null
+#!/bin/sh
+
+if ! xrdb -query > /dev/null 2>&1; then 
+	echo "Failed running xrdb."
+	exit 1
+fi
+
+if ! xrdb -query | grep -q $1 -m 1 2> /dev/null; then
+	echo "Can't grep key"
+	exit 1
+fi
+
+xrdb -query | grep $1 -m 1 | cut -f 2

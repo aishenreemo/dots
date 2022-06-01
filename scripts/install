@@ -52,7 +52,7 @@ ret_eval_script() {
 		local bright=$(xgetres "color$bright_index" 2> /dev/null)
 		local normal=$(xgetres "color$normal_index" 2> /dev/null)
 
-		if ! xrdb -query > /dev/null; then
+		if ! xrdb -query > /dev/null 2>&1; then
 			bright=$(get_default_color $bright_index)
 			normal=$(get_default_color $normal_index)
 		fi
