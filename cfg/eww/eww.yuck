@@ -41,29 +41,12 @@
 )
 
 (defvar calendar_show false)
-(defpoll calendar_day :interval "10h" "date '+%d'")
-(defpoll calendar_month :interval "10h" "scripts/get_calendar_month")
-(defpoll calendar_year :interval "10h" "date '+%Y'")
 (defwidget calendar_widget []
     (revealer 
         :transition "crossfade" 
         :reveal calendar_show
 
-        (box 
-            :class "calendar-window"
-            :space-evenly "false"
-            :orientation "v"
-
-            (box :class "calendar-box"
-                :orientation "h"
-                :space-evenly "false"
-
-                (calendar :class "calendar" 
-                    :show-details false
-                    :day calendar_day :month calendar_month :year calendar_year
-                )
-            )
-        )
+        (calendar)
     )
 )
 
