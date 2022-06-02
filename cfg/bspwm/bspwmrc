@@ -21,7 +21,8 @@ bspc subscribe node_state | while read -r _ _ _ _ state flag; do
     fi
 done &
 
-hsetroot -solid $(xgetres color0) -center "$HOME/.config/bspwm/assets/wallpaper2.png"
+theme=$(cat $HOME/.config/tdtheme)
+hsetroot -solid $(xgetres background) -center "$HOME/.config/bspwm/assets/$theme.png"
 
 bspc monitor -d                                                   {1..4}
 

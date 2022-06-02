@@ -7,8 +7,9 @@ paths=(
 	"./cfg/dunst/dunstrc" 
 )
 
-get_default_color() {
-	cat "./etc/misc/.Xresources" | grep $1 -m 1 | cut -f 2
+get_color() {
+	local theme=$(cat ./cfg/tdtheme)
+	cat "./etc/themes/$theme/.Xresources" | grep $1 -m 1 | sed "s/.*\(#[0-9a-fA-F]\{6\}\).*/\1/g"
 }
 
 ret_color_name() {
@@ -29,8 +30,8 @@ ret_eval_script() {
 	local prefix="TDC_"
 	local suffix_bright="_BRIGHT"
 
-	local bg=$(xgetres "background" 2> /dev/null || get_default_color "*background")
-	local fg=$(xgetres "foreground" 2> /dev/null || get_default_color "*foreground")
+	local bg=$(get_color "*background")
+	local fg=$(get_color "*foreground")
 
 	output="${output} -e \"s/${prefix}FOREGROUND/$fg/g\""
 	output="${output} -e \"s/${prefix}BACKGROUND/$bg/g\""
@@ -38,13 +39,9 @@ ret_eval_script() {
 	for normal_index in {0..7}; do
 		local bright_index=$(expr $normal_index + 8)
 		local color_name=$(ret_color_name $normal_index | tr "[a-z]" "[A-Z]")
-		local bright=$(xgetres "color$bright_index" 2> /dev/null)
-		local normal=$(xgetres "color$normal_index" 2> /dev/null)
-
-		if ! xrdb -query > /dev/null 2>&1; then
-			bright=$(get_default_color $bright_index)
-			normal=$(get_default_color $normal_index)
-		fi
+		local bright=$(get_color color$bright_index)
+		local normal=$(get_color color$normal_index)
+		
 
 		# bright color
 		output="${output} -e \"s/${prefix}"
@@ -68,7 +65,9 @@ make_directories() {
 }
 
 copy_config() {
-	cp ./etc/misc/{.xinitrc,.Xresources,.zshrc} $HOME
+	local theme=$(cat ./cfg/tdtheme)
+	cp ./etc/misc/{.xinitrc,.zshrc} $HOME
+	cp ./etc/themes/$theme/.Xresources $HOME
 	cp -r ./etc/fonts/* $HOME/.local/share/fonts
 	cp -r ./cfg/* $HOME/.config
 	cp -r ./bin/* $HOME/.local/bin 2> /dev/null
@@ -88,6 +87,11 @@ clean() {
 		mv $back $p
 	done
 }
+
+if [ $(basename $PWD) != tuyudots ]; then
+	echo "Not inside tuyudots directory."
+	exit 1
+fi
 
 gen_conf
 make_directories
