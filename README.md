@@ -25,7 +25,7 @@
 - Arch Linux
 ```sh
 # dependencies
-sudo pacman -Syu --needed base-devel xorg-xinit xorg-server xorg-xsetroot xorg-xrdb bspwm sxhkd alacritty dunst neovim rofi picom maim alsa-utils alsa-lib alsa-plugins zsh hsetroot
+sudo pacman -Syu --needed base-devel xorg-xinit xorg-server xorg-xsetroot xorg-xrdb bspwm sxhkd alacritty dunst neovim rofi picom maim alsa-utils alsa-lib alsa-plugins zsh hsetroot xdo
 
 # packer.nvim for neovim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
