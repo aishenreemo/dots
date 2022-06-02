@@ -22,8 +22,19 @@
 
 > :warning: Don’t just blindly copy the config files unless you know what that entails. You can fork this repo and remove the things you don't need. Use at your own risk!
 
-- git (Command Line)
+- Arch Linux
 ```sh
+# dependencies
+sudo pacman -Syu --needed base-devel xorg-xinit xorg-server xorg-xsetroot xorg-xrdb bspwm sxhkd alacritty dunst neovim rofi picom maim alsa-utils alsa-lib alsa-plugins zsh hsetroot
+
+# packer.nvim for neovim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+# oh-mh-zsh for zsh
+chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# tuyudots
 git clone https://github.com/aishenreemo/tuyudots
 cd tuyudots
 scripts/install
