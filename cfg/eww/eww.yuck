@@ -56,6 +56,15 @@
         :halign "start"
         :orientation "h"
         :class "left"
+
+        (box
+            :class "appmenu-container"
+            (button 
+                :class "appmenu"
+                :onclick "rofi -disable-history -modi 'drun' -show 'drun' &"
+                ""
+            )
+        )
     )
 )
 

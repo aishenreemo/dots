@@ -17,7 +17,7 @@ window {
 entry {
     background-color:     @bg;
     text-color:           @fg;
-    placeholder-color:    @cyan;
+    placeholder-color:    @blue-bright;
     placeholder:          "   Type here to search...";
     expand:               true;
     horizontal-align:     0.5;

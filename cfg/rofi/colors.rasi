@@ -17,8 +17,8 @@
     cyan:                         TDC_CYAN;
     white:                        TDC_WHITE;
 
-    foreground:			  TDC_FOREGROUND;
-    background:                   TDC_BACKGROUND;
+    foreground:			  TDC_BACKGROUND;
+    background:                   TDC_FOREGROUND;
     bg:                           @background;
     fg:                           @foreground;
     normal-background:            @bg;
