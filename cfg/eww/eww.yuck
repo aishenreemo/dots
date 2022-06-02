@@ -1,10 +1,7 @@
 (defwindow bar
-    :monitor 0
     :stacking "bg"
     :windowtype "dock"
     :wm-ignore false
-    :vexpand false
-    :hexpand false
     :reserve (struts :distance "40px" :side "top")
     :geometry (geometry
         :x "0%"
@@ -17,6 +14,22 @@
     (bar_widget)
 )
 
+(defwindow calendar
+    :windowtype "dock"
+    :stacking "fg"
+    :wm-ignore false
+
+    :geometry (geometry 
+        :x "-2%"
+        :y "50px"
+        :width "250px" 
+        :height "240px"
+        :anchor "top right"
+    )
+
+    (calendar_widget)
+)
+
 (defwidget bar_widget []
     (box
         :orientation "h"
@@ -24,6 +37,33 @@
         (left)
         (center)
         (right)
+    )
+)
+
+(defvar calendar_show false)
+(defpoll calendar_day :interval "10h" "date '+%d'")
+(defpoll calendar_month :interval "10h" "scripts/get_calendar_month")
+(defpoll calendar_year :interval "10h" "date '+%Y'")
+(defwidget calendar_widget []
+    (revealer 
+        :transition "crossfade" 
+        :reveal calendar_show
+
+        (box 
+            :class "calendar-window"
+            :space-evenly "false"
+            :orientation "v"
+
+            (box :class "calendar-box"
+                :orientation "h"
+                :space-evenly "false"
+
+                (calendar :class "calendar" 
+                    :show-details false
+                    :day calendar_day :month calendar_month :year calendar_year
+                )
+            )
+        )
     )
 )
 
@@ -53,7 +93,7 @@
 (defpoll volume_value :interval "250ms" "scripts/get_volume")
 (defwidget volume []
     (eventbox 
-        :onhover "eww update volume_show=true" 		
+        :onhover "eww update volume_show=true"          
         :onhoverlost "eww update volume_show=false"
         
         (box
@@ -68,7 +108,7 @@
                 :duration "600ms"
 
                 (scale 
-                    :class "volume-scale" 	  
+                    :class "volume-scale"         
                     :value "${volume_value}.0"
                     :orientation "h"      
                     :tooltip "Volume: ${volume_value}%" 
@@ -83,10 +123,20 @@
     )
 )
 
+(defpoll hour :interval "1s" "date '+%0l'")
+(defpoll minute :interval "1s" "date '+%M'")
+(defpoll am_pm :interval "1h" "date '+%p'")
+(defwidget time []
+        (box
+                :class "time" 
+                (button :onclick "scripts/open_calendar &" "${hour} : ${minute} ${am_pm}")
+        )
+)
+
 (defvar power_menu_show false)
 (defwidget power_menu []
     (eventbox 
-        :onhover "eww update power_menu_show=true" 		
+        :onhover "eww update power_menu_show=true"              
         :onhoverlost "eww update power_menu_show=false"
         
         (box
@@ -123,6 +173,7 @@
         :spacing 2
 
         (volume)
+        (time)
         (power_menu)
     )
 )

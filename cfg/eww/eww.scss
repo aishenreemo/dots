@@ -14,7 +14,13 @@ box.horizontal.bar {
 	background-color: transparent;
 }
 
-box.volume, box.power-menu {
+box.time > button > label {
+	color: $background;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+box.volume, box.power-menu, box.time {
 	background-color: $foreground;
 	border-radius: 5px;
 	border-color: $blue;
@@ -56,4 +62,36 @@ button.system > label, button.action-center > label {
 	border-color: $blue;
 }
 
+calendar {
+	background-image: none;
+	background-color: $foreground;
+	color: $background;
+	padding: .2rem;
+	border-radius: 8px;
+	box-shadow: none;
+	border-color: $blue;
+}
 
+calendar:selected {
+	background-color: $yellow;
+	color: $background;
+}
+
+calendar.header {
+	color: $magenta;
+	font-weight: bold;
+	border-width: 0.5;
+}
+
+calendar.button {
+	color: $red;
+}
+
+calendar.highlight {
+	color: $blue;
+	font-weight: bold;
+}
+
+calendar:indeterminate {
+	color: $blue-bright;
+}
