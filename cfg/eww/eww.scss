@@ -1,59 +1,59 @@
 @import "variables";
 
 window {
-    color:                  $background;
-    background-color:       transparent;
-
-    button {
-        background-image:   linear-gradient(transparent, transparent);
-        border:             none;
-        box-shadow:         none;
-	font-size:          1.3rem;
-    }
-
-    .w-button {
-        background-image:   linear-gradient(transparent, transparent);
-	color:              $foreground;
-	border-radius:	    50%;
-    }
-
-    .menu-btn {
-	border-radius:	    50%;
-	color:              $foreground;
-    }
-
-    .menu-window {
-	background:         $background;
-	padding:            20px;
-    }
-
-    .menu-ops > button {
-        font-size:          2.5rem;
-        background-image:   linear-gradient(transparent, transparent);
-	font-family:        "Material Icons";
-    }
-
-    button.logout-btn {
-        color:              $green;
-    }
-    button.logout-btn:hover {
-        background-image:   linear-gradient($green, $green);
-	color: 		    $background;
-    }
-
-    button.reboot-btn {
-        color:              $yellow;
-    }
-    button.reboot-btn:hover {
-        background-image:   linear-gradient($yellow, $yellow);
-	color: 		    $background;
-    }
-
-    button.shutdown-btn {
-        color:              $red;
-    }
-    button.shutdown-btn:hover {
-        background-image:   linear-gradient($red, $red);
-	color: 		    $background;
-    }
+	all: unset;
 }
+
+button {
+	background-image: none;
+	border: none;
+	box-shadow: none;
+}
+
+box.horizontal.bar {
+	background-color: transparent;
+}
+
+box.volume, box.power-menu {
+	background-color: $foreground;
+	border-radius: 5px;
+	border-color: $blue;
+	border-style: solid;
+	border-width: 1px;
+}
+
+button.workspace > label {
+	color: $foreground;
+}
+
+button.system:hover > label {
+	font-size: 1.3rem;
+	transition: font-size 100ms ease-in;
+}
+
+button.volume-icon > label {
+	color: $background;
+	font-size: 1.1rem;
+}
+
+button.system > label, button.action-center > label {
+	color: $background;
+	font-size: 1.1rem;
+	font-family: "Material Icons";
+}
+
+.volume-scale trough {
+	min-width: 100px;
+	min-height: 10px;
+        border-radius: 10px;
+	border-color: $cyan;
+	background-color: transparent;
+}
+
+.volume-scale trough highlight {
+        border-radius: 10px;
+	background-color: $cyan;
+	border-color: $blue;
+}
+
+

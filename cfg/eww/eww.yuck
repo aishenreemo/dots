@@ -1,41 +1,25 @@
-(defwidget workspaces [] (literal :content workspace))
-(deflisten workspace "scripts/get_workspaces_data")
-
 (defwindow bar
-    :monitor               0
-    :stacking              "bg"
-    :windowtype            "dock"
-    :wm-ignore             false
-    :vexpand               false
-    :hexpand               false
-    :reserve              (struts :distance "40px" :side "top")
-    :geometry             (geometry
-        :x                 "0%"
-        :y                 "4px"
-        :width             "99%"
-        :height            "40px"
-        :anchor            "top center"
+    :monitor 0
+    :stacking "bg"
+    :windowtype "dock"
+    :wm-ignore false
+    :vexpand false
+    :hexpand false
+    :reserve (struts :distance "40px" :side "top")
+    :geometry (geometry
+        :x "0%"
+        :y "4px"
+        :width "99%"
+        :height "40px"
+        :anchor "top center"
     )
 
     (bar_widget)
 )
 
-(defwindow menu
-    :geometry             (geometry
-        :width             "35%"
-        :height            "15%"
-        :anchor            "center"
-    )
-
-    (menu_widget)
-)
-
-(defvar menu_show false)
-
 (defwidget bar_widget []
     (box
-        :class             "bar"
-        :orientation       "h"
+        :orientation "h"
 
         (left)
         (center)
@@ -43,69 +27,102 @@
     )
 )
 
-(defwidget menu_widget []
+(defwidget left [] 
     (box
-        :class             "menu-window"
-        (revealer
-            :transition    "crossfade"
-            :reveal        menu_show
-            :duration      "0ms"
+        :valign "center"
+        :halign "start"
+        :orientation "h"
+        :class "left"
+    )
+)
 
-            (menu_ops)
+(deflisten workspaces_listener "scripts/get_workspaces_data")
+(defwidget center [] 
+    (box
+        :orientation "h"
+        :valign "center"
+        :halign "center"
+        :hexpand false
+        :class "center"
+
+        (literal :content workspaces_listener)
+    )
+)
+
+(defvar volume_show false)
+(defpoll volume_value :interval "250ms" "scripts/get_volume")
+(defwidget volume []
+    (eventbox 
+        :onhover "eww update volume_show=true" 		
+        :onhoverlost "eww update volume_show=false"
+        
+        (box
+            :class "volume"
+            :orientation "h"
+            :space-evenly false
+            :spacing "0.5"
+
+            (revealer
+                :transition "slideleft"
+                :reveal volume_show
+                :duration "600ms"
+
+                (scale 
+                    :class "volume-scale" 	  
+                    :value "${volume_value}.0"
+                    :orientation "h"      
+                    :tooltip "Volume: ${volume_value}%" 
+                    :flipped true
+                    :min 0 
+                    :max 101 
+                    :onchange "amixer -D pulse sset Master {}%" 
+                )
+            )
+            (button :class "volume-icon" "")
         )
     )
 )
 
-(defwidget left [] (box))
+(defvar power_menu_show false)
+(defwidget power_menu []
+    (eventbox 
+        :onhover "eww update power_menu_show=true" 		
+        :onhoverlost "eww update power_menu_show=false"
+        
+        (box
+            :class "power-menu"
+            :orientation "h"
+            :space-evenly false
+            :spacing "0.5"
 
-(defwidget center []
-    (box
-        :orientation       "h"
-        :valign            "center"
-        :halign            "center"
-        :hexpand           false
+            (revealer
+                :transition "slideleft"
+                :reveal power_menu_show
+                :duration "600ms"
 
-        (workspaces)
+                (box 
+                    :orientation "h" 
+                    :space-evenly "false"
+                    (button :class "system reboot" :tooltip "Reboot" :onclick "systemctl reboot" "")
+                    (button :class "system logout" :tooltip "Logout" :onclick "bspc quit" "")
+                    (button :class "system shutdown" :tooltip "Shutdown" :onclick "systemctl poweroff" "")
+                )
+            )
+            (button :class "action-center" :tooltip "Action Center" "")
+        )
     )
 )
 
 (defwidget right []
     (box
-        :valign            "center"
-        :halign            "end"
-        :orientation       "h"
-        :class             "right"
-        :spacing           10
+        :valign "center"
+        :orientation "h"
+        :halign "end"
+        :class "right"
+        :space-evenly false
+        :spacing 2
 
-        (button
-            :class         "menu-btn"
-            :tooltip       "Menu"
-            :onclick       "sh scripts/open_menu &" "☰"
-        )
-    )
-)
-
-(defwidget menu_ops []
-    (box
-        :orientation       "h"
-        :valign            "center"
-        :class             "menu-ops"
-        :spacing           30
-
-        (button
-            :class         "logout-btn"
-            :tooltip       "Logout"
-            :onclick       "bspc quit" ""
-        )
-        (button
-            :class         "reboot-btn"
-            :tooltip       "Reboot"
-            :onclick       "systemctl reboot" ""
-        )
-        (button
-            :class         "shutdown-btn"
-            :tooltip       "Shutdown"
-            :onclick       "systemctl poweroff" ""
-        )
+        (volume)
+        (power_menu)
     )
 )

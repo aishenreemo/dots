@@ -11,11 +11,11 @@ workspace_data() {
 
 	while [ "$i" -lt $length ]; do 
 		local content="○"
-		local class="w-button b$i"
+		local class="workspace"
 		
 		if echo "$focused_names" | grep -q `expr $i + 1`; then
 			content="●"
-			class="${class} w-button-active"
+			class="${class} active"
 		fi
 
 		buttons="$buttons (button"
