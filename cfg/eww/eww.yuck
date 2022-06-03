@@ -16,8 +16,8 @@
 
 (defwindow calendar
     :windowtype "dock"
-    :stacking "fg"
-    :wm-ignore false
+    :stacking "bg"
+    :wm-ignore true
 
     :geometry (geometry 
         :x "-2%"
@@ -110,7 +110,10 @@
                     :onchange "amixer -D pulse sset Master {}%" 
                 )
             )
-            (button :class "volume-icon" "")
+            (button 
+                :onclick "eww update volume_show=${volume_show ? false : true}"
+                :class "volume-icon" ""
+            )
         )
     )
 )
@@ -150,7 +153,11 @@
                     (button :class "system shutdown" :tooltip "Shutdown" :onclick "systemctl poweroff" "")
                 )
             )
-            (button :class "action-center" :tooltip "Action Center" "")
+            (button 
+                :onclick "eww update power_menu_show=${power_menu_show ? false : true}"
+                :class "action-center" 
+                :tooltip "Action Center" ""
+            )
         )
     )
 )
