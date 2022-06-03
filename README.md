@@ -25,7 +25,7 @@
 - Arch Linux
 ```sh
 # dependencies
-sudo pacman -Syu --needed base-devel xorg-xinit xorg-server xorg-xsetroot xorg-xrdb bspwm sxhkd alacritty dunst neovim rofi picom maim alsa-utils alsa-lib alsa-plugins zsh hsetroot xdo
+sudo pacman -Syu --needed base-devel xorg-xinit xorg-server xorg-xsetroot xorg-xrdb bspwm sxhkd alacritty dunst neovim rofi picom maim alsa-utils alsa-lib alsa-plugins zsh hsetroot xdo xdg-utils
 
 # oh-mh-zsh for zsh
 chsh -s $(which zsh)

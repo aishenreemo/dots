@@ -79,6 +79,7 @@ fg("Type", colors.green_bright)
 fg("Tag", colors.yellow_bright)
 fg("Comment", colors.blue_bright)
 fg("Underlined", colors.blue_bright)
+fgbg("Pmenu", colors.black_bright, colors.magenta)
 
 fg("NvimTreeFolderIcon", colors.blue)
 fg("NvimTreeFolderName", colors.blue_bright)

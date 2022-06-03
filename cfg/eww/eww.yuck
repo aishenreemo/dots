@@ -50,6 +50,39 @@
     )
 )
 
+(defvar menu_show false)
+(defwidget menu []
+    (box
+        :class "menu-container"
+        :orientation "h"
+        :space-evenly false
+        :spacing "0.5"
+
+        (button 
+            :onclick "eww update menu_show=${menu_show ? false : true}"
+            :class "menu-button" 
+            :tooltip "menu" ""
+        )
+
+        (revealer
+            :transition "slideright"
+            :reveal menu_show
+            :duration "600ms"
+
+            (box 
+                :orientation "h" 
+                :space-evenly "false"
+                :spacing 10
+                (button 
+                    :class "menu-buttons app"
+                    :onclick "rofi -disable-history -modi 'drun' -show 'drun' &"
+                    ""
+                )
+            )
+        )
+    )
+)
+
 (defwidget left [] 
     (box
         :valign "center"
@@ -57,16 +90,10 @@
         :orientation "h"
         :class "left"
 
-        (box
-            :class "appmenu-container"
-            (button 
-                :class "appmenu"
-                :onclick "rofi -disable-history -modi 'drun' -show 'drun' &"
-                ""
-            )
-        )
+        (menu)
     )
 )
+
 
 (deflisten workspaces_listener "scripts/get_workspaces_data")
 (defwidget center [] 
