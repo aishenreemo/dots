@@ -3,7 +3,7 @@
     <p>Configuration files to personalize my own system, feel open to browse!</p>
 </div>
 
-<img src="assets/images/preview.png" alt="Rice Showcase" align="right" width="400px">
+<img src="assets/images/prev.png" alt="Rice Showcase" align="right" width="400px">
 <br>
 <p>Here are the information about my setup:</p>
 
