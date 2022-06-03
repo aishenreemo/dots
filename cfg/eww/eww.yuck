@@ -84,36 +84,31 @@
 (defvar volume_show false)
 (defpoll volume_value :interval "250ms" "scripts/get_volume")
 (defwidget volume []
-    (eventbox 
-        :onhover "eww update volume_show=true"          
-        :onhoverlost "eww update volume_show=false"
-        
-        (box
-            :class "volume"
-            :orientation "h"
-            :space-evenly false
-            :spacing "0.5"
+    (box
+        :class "volume"
+        :orientation "h"
+        :space-evenly false
+        :spacing "0.5"
 
-            (revealer
-                :transition "slideleft"
-                :reveal volume_show
-                :duration "600ms"
+        (revealer
+            :transition "slideleft"
+            :reveal volume_show
+            :duration "600ms"
 
-                (scale 
-                    :class "volume-scale"         
-                    :value "${volume_value}.0"
-                    :orientation "h"      
-                    :tooltip "Volume: ${volume_value}%" 
-                    :flipped true
-                    :min 0 
-                    :max 101 
-                    :onchange "amixer -D pulse sset Master {}%" 
-                )
+            (scale 
+                :class "volume-scale"         
+                :value "${volume_value}.0"
+                :orientation "h"      
+                :tooltip "Volume: ${volume_value}%" 
+                :flipped true
+                :min 0 
+                :max 101 
+                :onchange "amixer -D pulse sset Master {}%" 
             )
-            (button 
-                :onclick "eww update volume_show=${volume_show ? false : true}"
-                :class "volume-icon" ""
-            )
+        )
+        (button 
+            :onclick "eww update volume_show=${volume_show ? false : true}"
+            :class "volume-icon" ""
         )
     )
 )
@@ -130,34 +125,29 @@
 
 (defvar power_menu_show false)
 (defwidget power_menu []
-    (eventbox 
-        :onhover "eww update power_menu_show=true"              
-        :onhoverlost "eww update power_menu_show=false"
-        
-        (box
-            :class "power-menu"
-            :orientation "h"
-            :space-evenly false
-            :spacing "0.5"
+    (box
+        :class "power-menu"
+        :orientation "h"
+        :space-evenly false
+        :spacing "0.5"
 
-            (revealer
-                :transition "slideleft"
-                :reveal power_menu_show
-                :duration "600ms"
+        (revealer
+            :transition "slideleft"
+            :reveal power_menu_show
+            :duration "600ms"
 
-                (box 
-                    :orientation "h" 
-                    :space-evenly "false"
-                    (button :class "system reboot" :tooltip "Reboot" :onclick "systemctl reboot" "")
-                    (button :class "system logout" :tooltip "Logout" :onclick "bspc quit" "")
-                    (button :class "system shutdown" :tooltip "Shutdown" :onclick "systemctl poweroff" "")
-                )
+            (box 
+                :orientation "h" 
+                :space-evenly "false"
+                (button :class "system reboot" :tooltip "Reboot" :onclick "systemctl reboot" "")
+                (button :class "system logout" :tooltip "Logout" :onclick "bspc quit" "")
+                (button :class "system shutdown" :tooltip "Shutdown" :onclick "systemctl poweroff" "")
             )
-            (button 
-                :onclick "eww update power_menu_show=${power_menu_show ? false : true}"
-                :class "action-center" 
-                :tooltip "Action Center" ""
-            )
+        )
+        (button 
+            :onclick "eww update power_menu_show=${power_menu_show ? false : true}"
+            :class "action-center" 
+            :tooltip "Action Center" ""
         )
     )
 )
