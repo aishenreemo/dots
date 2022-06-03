@@ -5,6 +5,7 @@ paths=(
 	"./cfg/alacritty/alacritty.yml" 
 	"./cfg/rofi/colors.rasi" 
 	"./cfg/dunst/dunstrc" 
+        "./cfg/nvim/lua/core/colors.lua"
 )
 
 get_color() {
