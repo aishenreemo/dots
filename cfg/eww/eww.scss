@@ -1,53 +1,53 @@
 @import "variables";
 
 window {
-	all: unset;
+        all: unset;
 }
 
 button {
-	background-image: none;
-	border: none;
-	box-shadow: none;
-	color: $background;
+        background-image: none;
+        border: none;
+        box-shadow: none;
+        color: $background;
 }
 
 box.horizontal.bar {
-	background-color: transparent;
+        background-color: transparent;
 }
 
 box.workspaces {
-	padding-left: 5px;
-	padding-right: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
 }
 
 box.time > button > label {
-	color: $background;
-	padding-left: 5px;
-	padding-right: 5px;
-	font-weight: bolder;
+        color: $background;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-weight: bolder;
 }
 
 box.volume, box.power-menu, box.time, box.workspaces, box.menu-container {
-	background-color: $foreground;
-	border-radius: 5px;
-	border-color: $blue;
-	border-style: solid;
-	border-width: 1px;
+        background-color: $foreground;
+        border-radius: 5px;
+        border-color: $blue;
+        border-style: solid;
+        border-width: 1px;
 }
 
 button.system:hover > label, .menu-buttons:hover > label, button.workspace:hover > label {
-	font-size: 1.3rem;
-	transition: font-size 100ms ease-in;
+        font-size: 1.3rem;
+        transition: font-size 100ms ease-in;
 }
 
 button.volume-icon > label {
-	color: $background;
-	font-size: 1.1rem;
+        color: $background;
+        font-size: 1.1rem;
 }
 
 button.system > label, button.action-center > label, button.menu-buttons > label {
-	font-size: 1.1rem;
-	font-family: "Material Icons";
+        font-size: 1.1rem;
+        font-family: "Material Icons";
 }
 
 button.reboot {
@@ -62,54 +62,60 @@ button.shutdown {
     color: $red;
 }
 
-button.app {
-    color: $blue;
-}
-
 .volume-scale trough {
-	min-width: 100px;
-	min-height: 10px;
+        min-width: 100px;
+        min-height: 10px;
         border-radius: 10px;
-	border-color: $cyan;
-	background-color: transparent;
+        border-color: $cyan;
+        background-color: transparent;
 }
 
 .volume-scale trough highlight {
         border-radius: 10px;
-	background-color: $cyan;
-	border-color: $blue;
+        background-color: $cyan;
+        border-color: $blue;
 }
 
 calendar {
-	background-image: none;
-	background-color: $foreground;
-	color: $background;
-	padding: .2rem;
-	border-radius: 8px;
-	box-shadow: none;
-	border-color: $blue;
+        background-image: none;
+        background-color: $foreground;
+        color: $background;
+        padding: .2rem;
+        border-radius: 8px;
+        box-shadow: none;
+        border-color: $blue;
 }
 
 calendar:selected {
-	background-color: $yellow;
-	color: $background;
+        background-color: $yellow;
+        color: $background;
 }
 
 calendar.header {
-	color: $magenta;
-	font-weight: bold;
-	border-width: 0.5;
+        color: $magenta;
+        font-weight: bold;
+        border-width: 0.5;
 }
 
 calendar.button {
-	color: $red;
+        color: $red;
 }
 
 calendar.highlight {
-	color: $blue;
-	font-weight: bold;
+        color: $blue;
+        font-weight: bold;
 }
 
 calendar:indeterminate {
-	color: $blue-bright;
+        color: $blue-bright;
+}
+
+box.dashboard-spacer {
+        transition: all 600ms ease-in-out;
+}
+
+box.dashboard-box {
+        background-color: $foreground;
+        border-radius: 6px;
+        padding: 2em;
 }

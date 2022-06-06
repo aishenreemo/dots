@@ -52,9 +52,9 @@
 
     # Frame
     frame_width = 3
-    frame_color = "TDC_BLACK_BRIGHT"
+    frame_color = "TDC_BLACK"
     outer_frame_width = 7
-    outer_frame_color = "TDC_BLACK_BRIGHT"
+    outer_frame_color = "TDC_BLACK"
     transparency = 0
     idle_threshold = 0
     monitor = 0

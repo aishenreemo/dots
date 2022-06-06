@@ -1,6 +1,6 @@
 #!/bin/bash
-RUN_FILE="$HOME/.cache/opening-eww-calendar.lock"
-LOCK_FILE="$HOME/.cache/eww-calendar.lock"
+RUN_FILE="$HOME/.cache/opening-eww-dashboard.lock"
+LOCK_FILE="$HOME/.cache/eww-dashboard.lock"
 
 if [[ -f "$RUN_FILE" ]]; then
         notify-send "You're on cooldown!"
@@ -16,14 +16,14 @@ fi
 
 if [[ ! -f "$LOCK_FILE" ]]; then
         touch "$LOCK_FILE"
-        eww open calendar
-        xdo raise -N eww-calendar
-        eww update calendar_show=true
+        eww open dashboard
+        xdo raise -N eww-dashboard
+        eww update dashboard_show=true
 else
-        eww update calendar_show=false
+        eww update dashboard_show=false
         sleep 0.5
-        eww close calendar
-        xdo lower -N eww-calendar
+        eww close dashboard
+        xdo lower -N eww-dashboard
         rm "$LOCK_FILE"
 fi
 rm $RUN_FILE

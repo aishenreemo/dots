@@ -30,6 +30,20 @@
     (calendar_widget)
 )
 
+(defwindow dashboard
+    :windowtype "dock"
+    :stacking "fg"
+    :wm-ignore true
+    :geometry (geometry 
+        :x "-20%"
+        :width "26%" 
+        :height "72%"
+        :anchor "left center"
+    )
+    
+    (dashboard_widget)
+)
+
 (defwidget bar_widget []
     (box
         :orientation "h"
@@ -47,6 +61,17 @@
         :reveal calendar_show
 
         (calendar)
+    )
+)
+
+(defvar dashboard_show false)
+(defwidget dashboard_widget []
+    (box 
+        :class "dashboard-window"
+        :space-evenly "false"  
+        :orientation "h"
+        (box :class "dashboard-spacer" :style {dashboard_show ? "padding-right: 20em;" : "padding-right: 0em;"})
+        (box :class "dashboard-box")
     )
 )
 
@@ -72,11 +97,15 @@
             (box 
                 :orientation "h" 
                 :space-evenly "false"
-                :spacing 10
                 (button 
                     :class "menu-buttons app"
                     :onclick "rofi -disable-history -modi 'drun' -show 'drun' &"
-                    ""
+                    ""
+                )
+                (button 
+                    :class "menu-buttons dashboard-btn"
+                    :onclick "scripts/open_dashboard &"
+                    ""
                 )
             )
         )
@@ -144,10 +173,10 @@
 (defpoll minute :interval "1s" "date '+%M'")
 (defpoll am_pm :interval "1h" "date '+%p'")
 (defwidget time []
-        (box
-                :class "time" 
-                (button :onclick "scripts/open_calendar &" "${hour} : ${minute} ${am_pm}")
-        )
+    (box
+        :class "time" 
+        (button :onclick "scripts/open_calendar &" "${hour} : ${minute} ${am_pm}")
+    )
 )
 
 (defvar power_menu_show false)
