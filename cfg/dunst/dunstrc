@@ -78,16 +78,16 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "TDC_BLACK_BRIGHT"
+    background = "TDC_BLACK"
     foreground = "TDC_BLUE_BRIGHT"
     timeout = 5
 
 [urgency_normal]
-    background = "TDC_BLACK_BRIGHT"
+    background = "TDC_BLACK"
     foreground = "TDC_YELLOW_BRIGHT"
     timeout = 7
 
 [urgency_critical]
-    background = "TDC_BLACK_BRIGHT"
+    background = "TDC_BLACK"
     foreground = "TDC_RED_BRIGHT"
     timeout = 10
