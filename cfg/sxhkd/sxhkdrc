@@ -1,3 +1,7 @@
+# dashboard
+super + d
+        $HOME/.config/eww/scripts/open_dashboard
+
 # terminal emulator
 super + Return
         alacritty       

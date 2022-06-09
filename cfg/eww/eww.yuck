@@ -65,13 +65,72 @@
 )
 
 (defvar dashboard_show false)
+(defpoll username :interval "24h" :run-while dashboard_show "whoami")
+(defpoll weekday :interval "24h" "date '+%a'")
+(defpoll monthday :interval "24h" "date '+%d %b'")
+(defpoll used_ram :interval "5s" :run-while dashboard_show "scripts/get_ram")
+(defpoll used_disk :interval "5s" :run-while dashboard_show "scripts/get_disk")
 (defwidget dashboard_widget []
     (box 
         :class "dashboard-window"
         :space-evenly "false"  
         :orientation "h"
         (box :class "dashboard-spacer" :style {dashboard_show ? "padding-right: 20em;" : "padding-right: 0em;"})
-        (box :class "dashboard-box")
+        (box 
+            :class "dashboard-box"
+            :orientation "v"
+            :space-evenly "false"  
+            
+            (box :class "avatar-img")
+            (box :class "username-label" "${username}")
+            (box 
+                :class "info"
+                :orientation "h"
+                :space-evenly false
+
+                (box
+                    :class "system"
+                    :orientation "h"
+                    :space-evenly false
+                    
+                    (box
+                        :class "ram"
+                        :orientation "v"
+                        :space-evenly false
+                        :spacing 6
+
+                        (progress
+                            :orientation "v"
+                            :value used_ram
+                            :flipped true
+                        )
+                        (label :class "ram-icon" :text "")
+                    )
+                    (box
+                        :orientation "v"
+                        :class "layout-manager"
+                        
+                        (button :onclick "bsp-layout once grid" "")
+                        (button :onclick "bsp-layout once tiled" "")
+                        (button :onclick "bsp-layout once tall" "")
+                    )
+                    (box
+                        :class "disk"
+                        :orientation "v"
+                        :space-evenly false
+                        :spacing 6
+
+                        (progress
+                            :orientation "v"
+                            :value used_disk
+                            :flipped true
+                        )
+
+                        (label :class "disk-icon" :text "")
+                    )
+                )
+            )
+        )
     )
 )
 

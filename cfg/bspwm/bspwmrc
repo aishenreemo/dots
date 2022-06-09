@@ -7,6 +7,7 @@ picom --config $HOME/.config/picom.conf &
 
 # remove eww cache
 rm $HOME/.cache/eww-calendar.lock
+rm $HOME/.cache/eww-dashboard.lock
 
 ## handle bar
 bspc subscribe node_state | while read -r _ _ _ _ state flag; do
