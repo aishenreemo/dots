@@ -17,6 +17,7 @@
 | **Compositor**           | [picom](https://github.com/yshui/picom)             |
 | **Editor**               | [neovim](https://github.com/neovim/neovim)          |
 | **Application Launcher** | [rofi](https://github.com/davatorium/rofi)          |
+| **Browser**              | [firefox](https://www.mozilla.org/en-US/firefox/)   |
 
 ## <samp>Installation</samp>
 
@@ -25,7 +26,7 @@
 - Arch Linux
 ```sh
 # dependencies
-sudo pacman -Syu --needed base-devel xorg-xinit xorg-server xorg-xsetroot xorg-xrdb bspwm sxhkd alacritty dunst neovim rofi picom maim alsa-utils alsa-lib alsa-plugins zsh hsetroot xdo xdg-utils
+sudo pacman -Syu --needed base-devel xorg-xinit xorg-server xorg-xsetroot xorg-xrdb bspwm sxhkd alacritty dunst neovim rofi picom maim alsa-utils alsa-lib alsa-plugins zsh hsetroot xdo xdg-utils firefox git
 
 # oh-mh-zsh for zsh
 chsh -s $(which zsh)
