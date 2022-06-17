@@ -37,3 +37,20 @@ git clone https://github.com/aishenreemo/tuyudots
 cd tuyudots
 scripts/install
 ```
+
+## Themes
+
+- ame
+![image](https://user-images.githubusercontent.com/75763715/174207031-62ac3433-0896-4566-99ad-e1d638396de8.png)
+
+- bus
+![image](https://user-images.githubusercontent.com/75763715/174207051-f9fbd2da-4bbc-4c7a-8c16-bd8f6fb96974.png)
+
+- ruu
+![image](https://user-images.githubusercontent.com/75763715/174207074-8065f08c-ccd4-48a3-af88-0ec016671bda.png)
+
+> To change the theme, change the content of this [file](./cfg/tdtheme) into `ame`, `bus` or `ruu` then rerun `scripts/install` script, and login again into bspwm.
+```sh
+echo ame > ./cfg/tdtheme
+scripts/install
+```
