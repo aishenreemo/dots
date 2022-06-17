@@ -1,5 +1,5 @@
 <div align="center">
-    <h1><samp>ツユ (TUYU) Dots [WIP]</samp></h1>
+    <h1><samp>ツユ (TUYU) Dots</samp></h1>
     <p>Configuration files to personalize my own system, feel open to browse!</p>
 </div>
 
