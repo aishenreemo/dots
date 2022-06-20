@@ -29,3 +29,9 @@ git clone https://github.com/aishenreemo/tuyudots
 cd tuyudots
 scripts/install
 ```
+
+## <samp>Acknowledgements</samp>
+
+- [janleigh](https://github.com/janleigh) (inspiration)
+- [palette](https://discord.com/users/958246733719167057) (for the wallpaper) 
+
