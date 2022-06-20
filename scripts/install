@@ -1,63 +1,5 @@
 #!/bin/sh
 
-paths=( 
-	"./cfg/eww/_variables.scss" 
-	"./cfg/alacritty/alacritty.yml" 
-	"./cfg/rofi/colors.rasi" 
-	"./cfg/dunst/dunstrc" 
-        "./cfg/nvim/lua/core/colors.lua"
-)
-
-get_color() {
-	local theme=$(cat ./cfg/tdtheme)
-	cat "./etc/themes/$theme/.Xresources" | grep $1 -m 1 | sed "s/.*\(#[0-9a-fA-F]\{6\}\).*/\1/g"
-}
-
-ret_color_name() {
-	case `expr $1 % 8` in
-		0) echo black;;
-		1) echo red;;
-		2) echo green;;
-		3) echo yellow;;
-		4) echo blue;;
-		5) echo magenta;;
-		6) echo cyan;;
-		7) echo white;;
-	esac
-}
-
-ret_eval_script() {	
-	local output="sed"
-	local prefix="TDC_"
-	local suffix_bright="_BRIGHT"
-
-	local bg=$(get_color "*background")
-	local fg=$(get_color "*foreground")
-
-	output="${output} -e \"s/${prefix}FOREGROUND/$fg/g\""
-	output="${output} -e \"s/${prefix}BACKGROUND/$bg/g\""
-
-	for normal_index in {0..7}; do
-		local bright_index=$(expr $normal_index + 8)
-		local color_name=$(ret_color_name $normal_index | tr "[a-z]" "[A-Z]")
-		local bright=$(get_color color$bright_index)
-		local normal=$(get_color color$normal_index)
-		
-
-		# bright color
-		output="${output} -e \"s/${prefix}"
-		output="${output}${color_name}"
-		output="${output}${suffix_bright}/"
-		output="${output}${bright}/g\""
-		# normal color
-		output="${output} -e \"s/${prefix}"
-		output="${output}${color_name}/"
-		output="${output}${normal}/g\""
-	done
-
-	echo $output $1
-}
-
 make_directories() {
 	mkdir -p $HOME/.config/
 	mkdir -p $HOME/.cache/
@@ -66,27 +8,10 @@ make_directories() {
 }
 
 copy_config() {
-	local theme=$(cat ./cfg/tdtheme)
-	cp ./etc/misc/{.xinitrc,.zshrc} $HOME
-	cp ./etc/themes/$theme/.Xresources $HOME
+	cp ./etc/misc/{.Xresources,.xinitrc,.zshrc} $HOME
 	cp -r ./etc/fonts/* $HOME/.local/share/fonts
 	cp -r ./cfg/* $HOME/.config
 	cp -r ./bin/* $HOME/.local/bin 2> /dev/null
-}
-
-gen_conf() {
-	for p in "${paths[@]}"; do
-		local back="${p}.backup"
-		cp $p $back
-		ret_eval_script $back | sh > $p
-	done
-}
-
-clean() {
-	for p in "${paths[@]}"; do
-		local back="${p}.backup"
-		mv $back $p
-	done
 }
 
 if [ $(basename $PWD) != tuyudots ]; then
@@ -94,8 +19,6 @@ if [ $(basename $PWD) != tuyudots ]; then
 	exit 1
 fi
 
-gen_conf
 make_directories
 copy_config
 fc-cache
-clean

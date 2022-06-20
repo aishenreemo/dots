@@ -7,4 +7,5 @@ end
 require("core.packer")
 require("core.options")
 require("core.keybinds")
-require("core.colors")
+
+vim.cmd("colorscheme challenger_deep")
