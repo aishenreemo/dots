@@ -14,7 +14,7 @@
 sudo pacman -Syu --needed xorg-xinit \
     xorg-server xorg-xsetroot xorg-xrdb i3-gaps \
     alacritty polybar dunst neovim rofi picom \
-    zsh hsetroot xdg-utils firefox git
+    zsh hsetroot xdg-utils firefox git xcb-util-xrm
 
 # optional dependencies
 # - tesseract-data-eng (imagetotext "super+i")
