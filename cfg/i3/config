@@ -2,7 +2,6 @@
 
 font pango:monospace 8
 
-# Set wallpaper with hsetroot
 exec --no-startup-id hsetroot -extend "$HOME/.config/i3/wallpaper.png"
 exec --no-startup-id picom --config "$HOME/.config/picom.conf" &
 exec --no-startup-id "$HOME/.config/polybar/launch.sh"
@@ -70,7 +69,6 @@ bindsym $mod+Return exec --no-startup-id $terminal
 bindsym $mod+b exec --no-startup-id $browser
 bindsym $mod+i exec --no-startup-id imgtotxt
 bindsym $mod+p exec --no-startup-id gpick -pso --no-newline | xclip -sel c
-bindsym $mod+Print exec --no-startup-id giph -s --format gif | curl -F "file=@-" 0x0.st | xclip -sel c
 bindsym Print exec --no-startup-id maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png
 # kill focused window
 bindsym $mod+c kill

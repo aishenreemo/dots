@@ -20,7 +20,6 @@ sudo pacman -Syu --needed xorg-xinit \
 # - tesseract-data-eng (imagetotext "super+i")
 # - gpick (color picker "super+p")
 # - maim (screenshot "printscr")
-# - giph (screenrecorder "super+printscr")
 
 # oh-my-zsh for zsh
 chsh -s $(which zsh)
