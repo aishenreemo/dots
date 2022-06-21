@@ -13,12 +13,14 @@
 ```sh
 sudo pacman -Syu --needed xorg-xinit \
     xorg-server xorg-xsetroot xorg-xrdb i3-gaps \
-    alacritty polybar dunst neovim rofi picom maim \
+    alacritty polybar dunst neovim rofi picom \
     zsh hsetroot xdg-utils firefox git
 
 # optional dependencies
-# - tesseract-data-eng (imagetotext super+i)
-# - gpick (color picker super+p)
+# - tesseract-data-eng (imagetotext "super+i")
+# - gpick (color picker "super+p")
+# - maim (screenshot "printscr")
+# - giph (screenrecorder "super+printscr")
 
 # oh-my-zsh for zsh
 chsh -s $(which zsh)

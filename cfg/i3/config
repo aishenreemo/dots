@@ -27,11 +27,42 @@ set $alt Mod1
 set $ctrl Control
 set $shift Shift
 
+
+set_from_resource $bg i3wm.background #000000
+set_from_resource $fg i3wm.foreground #000000
+set_from_resource $c0 i3wm.color0 #000000
+set_from_resource $c1 i3wm.color1 #000000
+set_from_resource $c2 i3wm.color2 #000000
+set_from_resource $c3 i3wm.color3 #000000
+set_from_resource $c4 i3wm.color4 #000000
+set_from_resource $c5 i3wm.color5 #000000
+set_from_resource $c6 i3wm.color6 #000000
+set_from_resource $c7 i3wm.color7 #000000
+set_from_resource $c8 i3wm.color8 #000000
+set_from_resource $c9 i3wm.color9 #000000
+set_from_resource $c10 i3wm.color10 #000000
+set_from_resource $c11 i3wm.color11 #000000
+set_from_resource $c12 i3wm.color12 #000000
+set_from_resource $c13 i3wm.color13 #000000
+set_from_resource $c14 i3wm.color14 #000000
+set_from_resource $c15 i3wm.color15 #000000
+
 set $terminal alacritty
 set $browser firefox
 
+# class                 border  backgr. text    indicator child_border
+client.focused          $c0     $bg     $c7     $c2       $bg
+client.focused_inactive $c8     $bg     $c7     $c2       $bg
+client.unfocused        $c8     $bg     $c7     $c2       $bg
+client.urgent           $c1     $bg     $c7     $c2       $bg
+client.placeholder      $c8     $bg     $c7     $c2       $bg
+
+client.background       $c7
+
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+# window focus wont follow your mouse movements as the mouse crosses window borders
+focus_follows_mouse no
 
 # programs
 bindsym $mod+a exec --no-startup-id rofi -disable-history -modi "drun" -show "drun"
@@ -39,8 +70,8 @@ bindsym $mod+Return exec --no-startup-id $terminal
 bindsym $mod+b exec --no-startup-id $browser
 bindsym $mod+i exec --no-startup-id imgtotxt
 bindsym $mod+p exec --no-startup-id gpick -pso --no-newline | xclip -sel c
+bindsym $mod+Print exec --no-startup-id giph -s --format gif | curl -F "file=@-" 0x0.st | xclip -sel c
 bindsym Print exec --no-startup-id maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png
-
 # kill focused window
 bindsym $mod+c kill
 

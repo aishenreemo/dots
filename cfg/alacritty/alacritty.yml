@@ -27,27 +27,27 @@ window:
   #history: 10000
   #multiplier: 3
 
-#font:
-  #normal:
-    #family: monospace
-    #style: Regular
-  #bold:
-    #family: monospace
-    #style: Bold
-  #italic:
-    #family: monospace
-    #style: Italic
-  #bold_italic:
-    #family: monospace
-    #style: Bold Italic
-  #size: 11.0
-  #offset:
-  #  x: 0
-  #  y: 0
-  #glyph_offset:
-  #  x: 0
-  #  y: 0
-  #use_thin_strokes: true
+font:
+  normal:
+    family: Hack
+    style: Regular
+  bold:
+    family: Hack
+    style: Bold
+  italic:
+    family: Hack
+    style: Italic
+  bold_italic:
+    family: Hack
+    style: Bold Italic
+  size: 11.0
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+  use_thin_strokes: true
 
 colors:
   # Default colors
