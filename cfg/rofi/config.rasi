@@ -75,9 +75,9 @@ listview {
 }
 
 mainbox {
-    background-color:     @bg;
-    text-color:           transparent;
-    children:             [ inputbar, listview ];
-    padding:              7px;
-    spacing:              5px;
+    background-color: @bg;
+    text-color: transparent;
+    children: [ inputbar, listview ];
+    padding: 7px;
+    spacing: 5px;
 }
