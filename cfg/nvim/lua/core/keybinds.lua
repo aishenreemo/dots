@@ -20,3 +20,8 @@ map("n", "<C-S-Right>", "<cmd>:vertical resize -2<CR>")
 
 -- nvim tree
 map("n", "<C-n>", "<cmd>NvimTreeToggle<CR>")
+
+-- buffer navigation
+map("n", "<S-w>", "<cmd>bd!<CR>")
+map("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>")
+map("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>")

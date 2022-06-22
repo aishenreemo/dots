@@ -36,6 +36,7 @@ opt.shortmess = "F"
 
 opt.whichwrap:append "<>[]hl"
 opt.fillchars = { eob = " " }
+opt.fillchars:append('vert:▕')
 
 local default_plugins = {
    "2html_plugin",

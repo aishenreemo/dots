@@ -32,6 +32,6 @@ scripts/install
 
 ## <samp>Acknowledgements</samp>
 
-- [janleigh](https://github.com/janleigh) (inspiration)
+- [janleigh](https://github.com/janleigh) (inspiration, lsp configuration and completion for neovim)
 - [palette](https://discord.com/users/958246733719167057) (for the wallpaper) 
 
