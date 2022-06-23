@@ -3,7 +3,7 @@
     <p>Configuration files to personalize my own system, feel open to browse!</p>
 </div>
 
-![](assets/preview.png)
+![](assets/prev.png)
 
 ## <samp>Keybinds</samp>
 
