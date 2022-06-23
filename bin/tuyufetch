@@ -36,12 +36,14 @@ colors=$(for i in {0..7}; do echo -en "\e[${1}$((30 + $i))m▁▁▁"; done)
 # ( . .)
 # c(")(")
 
+#  .-^-.
+# /_/_\_\
+#' ' J ` `
 tput clear
 cat << EOF
- 
-  (\ /)    $f6$k $t~ $kernel
-  ( $d· ·$t)   $f6$h $t~ $wmname
-  c($f1"$t)($f1"$t)  $f6$sh $t~ $shell
+   .-${f4}^${t}-.     $f6$k $t~ $kernel
+  /_/_\_\    $f6$h $t~ $wmname
+ ${f4}' ' J ' '   $f6$sh $t~ $shell
 $colors
- 
+
 EOF
