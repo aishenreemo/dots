@@ -4,6 +4,7 @@
 </div>
 
 ![](assets/prev.png)
+![previous rice](https://github.com/aishenreemo/tuyudots/tree/cbe76cc88a14ee0d4a1256bc95919396c5461a12)
 
 ## <samp>Keybinds</samp>
 
