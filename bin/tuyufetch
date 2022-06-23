@@ -41,9 +41,9 @@ colors=$(for i in {0..7}; do echo -en "\e[${1}$((30 + $i))m▁▁▁"; done)
 #' ' J ` `
 tput clear
 cat << EOF
-   .-${f4}^${t}-.     $f6$k $t~ $kernel
+   .-${f1}^${t}-.     $f6$k $t~ $kernel
   /_/_\_\    $f6$h $t~ $wmname
- ${f4}' ' J ' '   $f6$sh $t~ $shell
+ ${f4}' ' ${f1}J${f4} ' '   $f6$sh $t~ $shell
 $colors
 
 EOF
