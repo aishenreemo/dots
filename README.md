@@ -3,7 +3,7 @@
     <p>Configuration files to personalize my own system, feel open to browse!</p>
 </div>
 
-![](assets/prev.png)
+![](assets/preview.png)
 ![previous rice](https://github.com/aishenreemo/tuyudots/tree/cbe76cc88a14ee0d4a1256bc95919396c5461a12)
 
 ## <samp>Keybinds</samp>
