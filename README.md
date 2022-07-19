@@ -1,45 +1,15 @@
 <div align="center">
-    <h1><samp>ツユ (TUYU) Dots</samp></h1>
-    <p>Configuration files to personalize my own system, feel open to browse!</p>
+    <h1>:small_blue_diamond:<i><samp>ツユ dots</samp></i>:small_blue_diamond:</h1>
+    <pre>
+        <a href="#small_blue_diamond-installation">installation</a> • <a href="#small_blue_diamond-keybinds">keybinds</a> • <a href="#small_blue_diamond-acknowledgements">acknowledgements</a> • <a href="https://github.com/aishenreemo/tuyudots/tree/cbe76cc88a14ee0d4a1256bc95919396c5461a12">previous rice</a></pre>
 </div>
 
 ![](assets/preview.png)
-![previous rice](https://github.com/aishenreemo/tuyudots/tree/cbe76cc88a14ee0d4a1256bc95919396c5461a12)
 
-## <samp>Keybinds</samp>
+## :small_blue_diamond: <samp>installation</samp>
 
-| Key | Function |
-| --- | -------- |
-| Super + a | Open app menu |
-| Super + Enter | Open terminal |
-| Super + b | Open browser (firefox) |
-| Super + i | Image to text |
-| Super + p | Color picker |
-| Printscr | Screenshot |
+- arch linux
 
-| Key | Function |
-| --- | -------- |
-| Super + c | Close window |
-| Super + Tab | Focus next window |
-| Super + Shift + f | Toggle fullscreen |
-| Super + Ctrl + l | Toggle layout |
-| Super + Shift + Space | Toggle floating |
-| Super + Left mouse click | Move floating window |
-| Super + Right mouse click | Resize floating window |
-
-| Key | Function |
-| --- | -------- |
-| Super + 1-5 | View workspace | 
-| Super + Shift + 1-5 | Move window to workspace | 
-| Super + Shift + r | Restart i3 |
-| Super + Shift + q | Quit i3 |
-
-
-## <samp>Installation</samp>
-
-> :warning: Don’t just blindly copy the config files unless you know what that entails. You can fork this repo and remove the things you don't need. Use at your own risk!
-
-- Arch linux
 ```sh
 sudo pacman -Syu --needed xorg-xinit \
     xorg-server xorg-xsetroot xorg-xrdb i3-gaps \
@@ -53,7 +23,6 @@ sudo pacman -Syu --needed xorg-xinit \
 # - maim (screenshot "printscr")
 
 # oh-my-zsh for zsh
-chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 git clone https://github.com/aishenreemo/tuyudots
@@ -61,8 +30,30 @@ cd tuyudots
 scripts/install
 ```
 
-## <samp>Acknowledgements</samp>
+## :small_blue_diamond: <samp>keybinds</samp>
 
-- [janleigh](https://github.com/janleigh) (inspiration, lsp configuration and completion for neovim)
-- [palette](https://discord.com/users/958246733719167057) (for the wallpaper) 
+| key | function |
+| :--- | :-------- |
+| <kbd>super</kbd> + <kbd>a</kbd> | open app menu |
+| <kbd>super</kbd> + <kbd>Enter</kbd> | open terminal |
+| <kbd>super</kbd> + <kbd>b</kbd> | open browser (firefox) |
+| <kbd>super</kbd> + <kbd>i</kbd> | image to text |
+| <kbd>super</kbd> + <kbd>p</kbd> | color picker |
+| <kbd>printscr</kbd> | screenshot |
+| <kbd>super</kbd> + <kbd>c</kbd> | close window |
+| <kbd>super</kbd> + <kbd>tab</kbd> | focus next window |
+| <kbd>super</kbd> + <kbd>shift</kbd> + <kbd>f</kbd> | toggle fullscreen |
+| <kbd>super</kbd> + <kbd>ctrl</kbd> + <kbd>l</kbd> | toggle layout |
+| <kbd>super</kbd> + <kbd>shift</kbd> + <kbd>space</kbd> | toggle floating |
+| <kbd>super</kbd> + <kbd>left click</kbd> | move floating window |
+| <kbd>super</kbd> + <kbd>right click</kbd> | resize floating window |
+| <kbd>super</kbd> + <kbd>1</kbd>-<kbd>5</kbd> | view workspace | 
+| <kbd>super</kbd> + <kbd>shift</kbd> + <kbd>1</kbd>-<kbd>5</kbd> | move window to workspace | 
+| <kbd>super</kbd> + <kbd>shift</kbd> + <kbd>r</kbd> | restart i3 |
+| <kbd>super</kbd> + <kbd>shift</kbd> + <kbd>q</kbd> | quit i3 |
+
+## :small_blue_diamond: <samp>acknowledgements</samp>
+
+- [janleigh](https://github.com/janleigh) (inspiration)
+- [palette](https://discord.com/users/958246733719167057) (wallpaper) 
 
