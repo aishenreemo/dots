@@ -1,12 +1,10 @@
 <div align="center">
-    <h1>:small_blue_diamond:<i><samp>ツユ dots</samp></i>:small_blue_diamond:</h1>
-    <pre>
-        <a href="#small_blue_diamond-installation">installation</a> • <a href="#small_blue_diamond-keybinds">keybinds</a> • <a href="#small_blue_diamond-acknowledgements">acknowledgements</a> • <a href="https://github.com/aishenreemo/tuyudots/tree/cbe76cc88a14ee0d4a1256bc95919396c5461a12">previous rice</a></pre>
+    <h1><i><samp>ツユ dots</samp></i></h1>
 </div>
 
 ![](assets/preview.png)
 
-## :small_blue_diamond: <samp>installation</samp>
+## <samp>installation</samp>
 
 - arch linux
 
@@ -30,7 +28,7 @@ cd tuyudots
 scripts/install
 ```
 
-## :small_blue_diamond: <samp>keybinds</samp>
+## <samp>keybinds</samp>
 
 | key | function |
 | :--- | :-------- |
@@ -52,8 +50,6 @@ scripts/install
 | <kbd>super</kbd> + <kbd>shift</kbd> + <kbd>r</kbd> | restart i3 |
 | <kbd>super</kbd> + <kbd>shift</kbd> + <kbd>q</kbd> | quit i3 |
 
-## :small_blue_diamond: <samp>acknowledgements</samp>
+## <samp>acknowledgements</samp>
 
 - [janleigh](https://github.com/janleigh) (inspiration)
-- [palette](https://discord.com/users/958246733719167057) (wallpaper) 
-
