@@ -2,7 +2,7 @@
     <h1><i><samp>ツユ dots</samp></i></h1>
 </div>
 
-![](assets/preview.png)
+![](assets/prev.png)
 
 ## <samp>installation</samp>
 
