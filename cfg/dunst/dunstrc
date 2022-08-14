@@ -55,14 +55,14 @@
     height = 300
 
     # Position of the notification
-    origin = top-right
+    origin = bottom-right
 
     # Offset from the origin
     offset = 10x10
 
     # Frame
     frame_width = 3
-    frame_color = "#100e23"
+    frame_color = "#1e1c31"
 
     # The transparency of the window. range: [0; 100]
     # This option will only work if a compositing windowmanager is present (e.g. xcompmgr, compiz, etc..)
