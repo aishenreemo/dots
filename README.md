@@ -53,3 +53,4 @@ scripts/install
 ## <samp>acknowledgements</samp>
 
 - [janleigh](https://github.com/janleigh) (inspiration)
+- [omutatsu](https://twitter.com/omrice4869) (wallpaper)
