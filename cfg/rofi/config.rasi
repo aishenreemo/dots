@@ -40,10 +40,10 @@ window {
     width: 30%;
     height: 50%;
     background-color: @background;
-    location: south west;
-    anchor: south west;
+    location: north west;
+    anchor: north west;
     x-offset: 6px;        
-    y-offset: -50px;
+    y-offset: 50px;
     border: none;
 }
 
