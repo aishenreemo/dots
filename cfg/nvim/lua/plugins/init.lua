@@ -86,7 +86,10 @@ require("packer").startup(function(use)
                             highlight = "BufferlineDirectory"
                         }
                     },
-                    indicator_icon = "▎",
+                    indicator = { 
+                        icon = "▎", 
+                        style = "icon" 
+                    },
                     modified_icon = "",
 
                     close_icon = "",
