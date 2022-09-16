@@ -28,6 +28,8 @@ cd tuyudots
 scripts/install
 ```
 
+[previous rice](https://github.com/aishenreemo/tuyudots/tree/aca10b83db5cbdf545f2f0e738a347d2a0358489)
+
 ## <samp>keybinds</samp>
 
 | key | function |
@@ -52,5 +54,5 @@ scripts/install
 
 ## <samp>acknowledgements</samp>
 
-- [janleigh](https://github.com/janleigh) (inspiration)
+- [janleigh](https://github.com/janleigh) (inspiration, colorscheme)
 - [omutatsu](https://twitter.com/omrice4869) (wallpaper)
