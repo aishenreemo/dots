@@ -1,23 +1,26 @@
 *{
-    color0: #565575;
-    color8: #100e23;
-    color1: #ff8080;
-    color9: #ff5458;
-    color2: #95ffa4;
-    color10: #62d196;
-    color3: #ffe9aa;
-    color11: #ffb378;
-    color4: #91ddff;
-    color12: #65b2ff;
-    color5: #c991e1;
-    color13: #906cff;
-    color6: #aaffe4;
-    color14: #63f2f1;
-    color7: #cbe3e7;
-    color15: #a6b3cc;
+    color0:  #131718;
+    color1:  #df5b61;
+    color2:  #87c7a1;
+    color3:  #de8f78;
+    color4:  #6791c9;
+    color5:  #bc83e3;
+    color6:  #70b9cc;
+    color7:  #c4c4c4;
+                    
+                    
+    color8:  #151a1c;
+    color9:  #ee6a70;
+    color10: #96d6b0;
+    color11: #ffb29b;
+    color12: #7ba5dd;
+    color13: #cb92f2;
+    color14: #7fc8db;
+    color15: #cccccc;
 
-    foreground: #cbe3e7;
-    background: #1e1c31;
+    background: #0B0F10;
+    foreground: #c5c8c9;
+
     bg: @background;
     fg: @foreground;
     normal-background: @bg;
