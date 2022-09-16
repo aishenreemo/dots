@@ -2,7 +2,7 @@
 
 font pango:Hack 8
 
-exec --no-startup-id hsetroot -extend "$HOME/.config/i3/wallpaper.png"
+exec --no-startup-id hsetroot -cover "$HOME/.config/i3/wallpaper.jpg"
 exec --no-startup-id picom --config "$HOME/.config/picom.conf"
 exec --no-startup-id "$HOME/.config/polybar/launch.sh"
 exec --no-startup-id dunst
