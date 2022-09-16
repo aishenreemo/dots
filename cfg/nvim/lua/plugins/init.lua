@@ -2,7 +2,14 @@ require("packer").startup(function(use)
     use("wbthomason/packer.nvim")
     use("gpanders/editorconfig.nvim")
     use("godlygeek/tabular")
-    use("challenger-deep-theme/vim")
+
+    use({
+        "nekonako/xresources-nvim",
+        config = function ()
+            vim.o.background = "dark"
+            vim.cmd("colorscheme xresources")
+        end
+    })
 
     use({
         "lewis6991/impatient.nvim",
