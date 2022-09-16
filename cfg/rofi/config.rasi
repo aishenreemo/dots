@@ -41,12 +41,12 @@ configuration {
 
 window {
     width: 30%;
-    height: 50%;
+    height: 30%;
     background-color: @background;
-    location: north west;
-    anchor: north west;
-    x-offset: 6px;        
-    y-offset: 50px;
+    location: north;
+    anchor: north;
+    x-offset: 0px;        
+    y-offset: 40px;
     border: none;
 }
 
