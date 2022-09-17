@@ -19,6 +19,7 @@ sudo pacman -Syu --needed xorg-xinit \
 # - tesseract-data-eng (imagetotext "super+i")
 # - gpick (color picker "super+p")
 # - maim (screenshot "printscr")
+# - light (brightness)
 
 # oh-my-zsh for zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
