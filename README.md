@@ -3,56 +3,120 @@
 </div>
 
 ![](assets/preview.png)
-
-## <samp>installation</samp>
-
-- arch linux
-
-```sh
-sudo pacman -Syu --needed xorg-xinit \
-    xorg-server xorg-xsetroot xorg-xrdb i3-gaps \
-    alacritty polybar dunst neovim rofi picom \
-    zsh hsetroot xdg-utils git xcb-util-xrm libnotify
-
-# optional dependencies
-# - tesseract-data-eng (imagetotext "super+i")
-# - gpick (color picker "super+p")
-# - maim (screenshot "printscr")
-# - light (brightness)
-
-# oh-my-zsh for zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-git clone https://github.com/aishenreemo/tuyudots
-cd tuyudots
-scripts/install
-```
-
 [previous rice](https://github.com/aishenreemo/tuyudots/tree/aca10b83db5cbdf545f2f0e738a347d2a0358489)
 
-## <samp>keybinds</samp>
+## <samp>installation</samp>
+1. Clone the repository using `git`.
+    ```sh
+    git clone https://github.com/aishenreemo/tuyudots
+    ```
 
-| key | function |
-| :--- | :-------- |
-| <kbd>super</kbd> + <kbd>a</kbd> | open app menu |
-| <kbd>super</kbd> + <kbd>Enter</kbd> | open terminal |
-| <kbd>super</kbd> + <kbd>b</kbd> | open browser (firefox) |
-| <kbd>super</kbd> + <kbd>i</kbd> | image to text |
-| <kbd>super</kbd> + <kbd>p</kbd> | color picker |
-| <kbd>printscr</kbd> | screenshot |
-| <kbd>super</kbd> + <kbd>c</kbd> | close window |
-| <kbd>super</kbd> + <kbd>tab</kbd> | focus next window |
-| <kbd>super</kbd> + <kbd>shift</kbd> + <kbd>f</kbd> | toggle fullscreen |
-| <kbd>super</kbd> + <kbd>ctrl</kbd> + <kbd>l</kbd> | toggle layout |
-| <kbd>super</kbd> + <kbd>shift</kbd> + <kbd>space</kbd> | toggle floating |
-| <kbd>super</kbd> + <kbd>left click</kbd> | move floating window |
-| <kbd>super</kbd> + <kbd>right click</kbd> | resize floating window |
-| <kbd>super</kbd> + <kbd>1</kbd>-<kbd>5</kbd> | view workspace | 
-| <kbd>super</kbd> + <kbd>shift</kbd> + <kbd>1</kbd>-<kbd>5</kbd> | move window to workspace | 
-| <kbd>super</kbd> + <kbd>shift</kbd> + <kbd>r</kbd> | restart i3 |
-| <kbd>super</kbd> + <kbd>shift</kbd> + <kbd>q</kbd> | quit i3 |
+2. Install dependencies.
+
+    <details>
+    <summary>Arch Linux (and other Arch-based distributions)</summary>
+
+    - install an AUR helper `paru`. 
+        ```sh
+        git clone https://aur.archlinux.org/paru-bin.git
+        cd paru-bin && makepkg -si && cd ..
+        ```
+
+    - install dependencies (just install what you need lol). 
+        ```sh
+        paru -S --needed \
+            xorg-xinit xorg-server xorg-xsetroot \
+            i3-gaps picom xdg-utils xorg-xrdb hsetroot \
+            alacritty zsh neovim rofi polybar xcb-util-xrm \
+            dunst libnotify tesseract-data-eng gpick maim light
+        ```
+
+    - install `oh-my-zsh` framework if you're using zsh. 
+        ```sh
+        sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+        ```
+    </details>
+
+3. Initialize directories.
+    ```sh
+    mkdir -p ~/.config/
+    mkdir -p ~/.cache/
+    mkdir -p ~/.local/bin/
+    mkdir -p ~/.local/share/fonts
+    ```
+
+4. Copy configuration files to their respective paths.
+
+    - Move to `tuyudots` directory
+        ```sh
+        cd tuyudots
+        ```
+
+    - Fonts
+        ```sh
+        cp -r ./etc/fonts/* ~/.local/share/fonts
+        fc-cache -v
+        ```
+
+        <details>
+        <summary>expand</summary>
+
+        ```sh
+        cp "./etc/fonts/MaterialIcons-Regular.ttf"      ~/.local/share/fonts
+        cp "./etc/fonts/Iosevka Nerd Font Complete.ttf" ~/.local/share/fonts
+        cp -r "./etc/fonts/Hack"                        ~/.local/share/fonts
+        fc-cache -v
+        ```
+        </details>
+
+    - Configuration files
+        ```sh
+        cp -r ./cfg/* ~/.config
+        ```
+
+        <details>
+        <summary>expand</summary>
+
+        ```sh
+        cp ./cfg/picom.conf   ~/.config
+        cp -r ./cfg/alacritty ~/.config
+        cp -r ./cfg/dunst     ~/.config
+        cp -r ./cfg/i3        ~/.config # requires xresources
+        cp -r ./cfg/nvim      ~/.config # requires xresources
+        cp -r ./cfg/polybar   ~/.config # requires xresources
+        cp -r ./cfg/rofi      ~/.config
+        ```
+        </details>
+
+    - Binaries
+        ```sh
+        cp ./bin/* ~/.local/bin
+        ```
+
+        <details>
+        <summary>expand</summary>
+
+        ```sh
+        cp ./bin/clrs        ~/.local/bin
+        cp ./bin/colorblocks ~/.local/bin
+        cp ./bin/imgtotxt    ~/.local/bin
+        cp ./bin/sus         ~/.local/bin
+        cp ./bin/tuyufetch   ~/.local/bin
+        ```
+        </details>
+
+    - Misc
+        > yeet ur display manager if you have one :knife:
+
+        ```sh
+        cp ./etc/misc/.zshrc ~
+        cp ./etc/misc/.xinitrc ~
+        cp ./etc/misc/.Xresources ~
+        ```
+
+5. Reboot, login then run `startx`.
 
 ## <samp>acknowledgements</samp>
 
-- [janleigh](https://github.com/janleigh) (inspiration, colorscheme)
+- [janleigh](https://github.com/janleigh) (colorscheme)
 - [omutatsu](https://twitter.com/omrice4869) (wallpaper)
