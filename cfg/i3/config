@@ -8,8 +8,8 @@ exec --no-startup-id "$HOME/.config/polybar/launch.sh"
 exec --no-startup-id dunst
 
 # gaps
-default_border pixel 0
-default_floating_border pixel 0
+for_window [all] border pixel 0
+for_window [all] floating_border pixel 0
 
 gaps outer 5
 gaps inner 5
