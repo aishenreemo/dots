@@ -1,4 +1,5 @@
 xrdb -I$HOME ~/.Xresources
+xset s off -dpms
 
 export PATH="$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
 export XDG_SESSION_TYPE=x11
