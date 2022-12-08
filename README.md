@@ -120,4 +120,3 @@
 ## <samp>acknowledgements</samp>
 
 - [janleigh](https://github.com/janleigh) (colorscheme)
-- [omutatsu](https://twitter.com/omrice4869) (wallpaper)
