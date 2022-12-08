@@ -28,7 +28,8 @@
             xorg-xinit xorg-server xorg-xsetroot \
             i3-gaps picom xdg-utils xorg-xrdb hsetroot \
             alacritty zsh neovim rofi polybar xcb-util-xrm \
-            dunst libnotify tesseract-data-eng gpick maim light
+            dunst libnotify tesseract-data-eng gpick maim light \
+            cmus peaclock cava unimatrix tmux # bin/music-player dependencies
         ```
 
     - install `oh-my-zsh` framework if you're using zsh. 
