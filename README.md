@@ -3,6 +3,7 @@
 </div>
 
 ![](assets/preview.png)
+![](assets/preview-2.png)
 [previous rice](https://github.com/aishenreemo/dots/tree/aca10b83db5cbdf545f2f0e738a347d2a0358489)
 
 ## <samp>installation</samp>
