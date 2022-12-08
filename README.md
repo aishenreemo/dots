@@ -1,14 +1,14 @@
 <div align="center">
-    <h1><i><samp>ツユ dots</samp></i></h1>
+    <h1><i><samp>dots</samp></i></h1>
 </div>
 
 ![](assets/preview.png)
-[previous rice](https://github.com/aishenreemo/tuyudots/tree/aca10b83db5cbdf545f2f0e738a347d2a0358489)
+[previous rice](https://github.com/aishenreemo/dots/tree/aca10b83db5cbdf545f2f0e738a347d2a0358489)
 
 ## <samp>installation</samp>
 1. Clone the repository using `git`.
     ```sh
-    git clone https://github.com/aishenreemo/tuyudots
+    git clone https://github.com/aishenreemo/dots
     ```
 
 2. Install dependencies.
@@ -47,9 +47,9 @@
 
 4. Copy configuration files to their respective paths.
 
-    - Move to `tuyudots` directory
+    - Move to `dots` directory
         ```sh
-        cd tuyudots
+        cd dots
         ```
 
     - Fonts
