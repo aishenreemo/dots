@@ -98,11 +98,11 @@
         <summary>expand</summary>
 
         ```sh
-        cp ./bin/clrs        ~/.local/bin
-        cp ./bin/colorblocks ~/.local/bin
-        cp ./bin/imgtotxt    ~/.local/bin
-        cp ./bin/sus         ~/.local/bin
-        cp ./bin/tuyufetch   ~/.local/bin
+        cp ./bin/clrs         ~/.local/bin
+        cp ./bin/colorblocks  ~/.local/bin
+        cp ./bin/imgtotxt     ~/.local/bin
+        cp ./bin/sus          ~/.local/bin
+        cp ./bin/music-player ~/.local/bin
         ```
         </details>
 
