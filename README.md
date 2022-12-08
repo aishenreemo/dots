@@ -4,7 +4,7 @@
 
 ![](assets/preview.png)
 ![](assets/preview-2.png)
-[previous rice](https://github.com/aishenreemo/dots/tree/aca10b83db5cbdf545f2f0e738a347d2a0358489)
+[previous rice](https://github.com/aishenreemo/dots/tree/db8d83053b5d02dc80ba933cc9417e98ed4d1054)
 
 ## <samp>installation</samp>
 1. Clone the repository using `git`.
