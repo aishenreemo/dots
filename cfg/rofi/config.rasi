@@ -43,10 +43,10 @@ window {
     width: 30%;
     height: 30%;
     background-color: @background;
-    location: north;
-    anchor: north;
-    x-offset: 0px;        
-    y-offset: 40px;
+    location: north west;
+    anchor: north west;
+    x-offset: 40px;        
+    y-offset: 60px;
     border: none;
 }
 
