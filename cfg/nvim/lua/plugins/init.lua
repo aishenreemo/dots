@@ -2,6 +2,7 @@ require("packer").startup(function(use)
     use("wbthomason/packer.nvim")
     use("gpanders/editorconfig.nvim")
     use("godlygeek/tabular")
+    use("ThePrimeagen/vim-be-good")
 
     use({
         "nekonako/xresources-nvim",
