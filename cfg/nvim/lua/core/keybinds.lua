@@ -9,9 +9,23 @@ end
 -- remove highlight
 map("n", "<esc>", ":noh <CR>")
 
--- horizontal navigation
+-- shift + j cursor
+vim.keymap.set("n", "J", "mzJ`z")
+
+-- vertical navigation
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
+
+-- replace thingy but dont copy the deleted thing in clipboard
+map("x", "<leader>p", "\"_dP")
+
+-- rename a variable
+map("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
+
+-- make current file executable
+map("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- window navigation
 map("n", "<C-h>", "<C-w>h")
@@ -29,9 +43,9 @@ map("n", "<C-S-Right>", "<cmd>:vertical resize -2<CR>")
 map("n", "<C-n>", "<cmd>NvimTreeToggle<CR>")
 
 -- buffer navigation
-map("n", "<S-w>", "<cmd>bd | bp<CR>")
-map("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>")
-map("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>")
+map("n", "<leader>q", "<cmd>bd | bp<CR>")
+map("n", "<leader>h", "<cmd>BufferLineCyclePrev<CR>")
+map("n", "<leader>l", "<cmd>BufferLineCycleNext<CR>")
 
 -- lsp
-map("n", "<C-p>", "<cmd>lua vim.diagnostic.open_float()<CR>")
+map("n", "<leader>p", "<cmd>lua vim.diagnostic.open_float()<CR>")
