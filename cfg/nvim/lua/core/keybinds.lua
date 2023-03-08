@@ -6,6 +6,13 @@ local function map(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+-- remove highlight
+map("n", "<esc>", ":noh <CR>")
+
+-- horizontal navigation
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+
 -- window navigation
 map("n", "<C-h>", "<C-w>h")
 map("n", "<C-j>", "<C-w>j")
