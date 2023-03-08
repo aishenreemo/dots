@@ -14,8 +14,8 @@ copy_config() {
 	cp -r ./bin/* $HOME/.local/bin 2> /dev/null
 }
 
-if [ $(basename $PWD) != tuyudots ]; then
-	echo "Not inside tuyudots directory."
+if [ $(basename $PWD) != dots ]; then
+	echo "Not inside dots directory."
 	exit 1
 fi
 
