@@ -10,7 +10,7 @@ end
 map("n", "<esc>", ":noh <CR>")
 
 -- shift + j cursor
-vim.keymap.set("n", "J", "mzJ`z")
+map("n", "J", "mzJ`z")
 
 -- vertical navigation
 map("n", "<C-d>", "<C-d>zz")
