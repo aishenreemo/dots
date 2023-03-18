@@ -3,6 +3,7 @@ require("packer").startup(function(use)
     use("gpanders/editorconfig.nvim")
     use("godlygeek/tabular")
     use("ThePrimeagen/vim-be-good")
+    use("kyazdani42/nvim-web-devicons")
 
     use({
         "nekonako/xresources-nvim",
@@ -78,6 +79,9 @@ require("packer").startup(function(use)
 
     use({
         "kyazdani42/nvim-tree.lua",
+        requires = {
+            "kyazdani42/nvim-web-devicons", -- optional, for file icons
+        },
         config = function()
             require("nvim-tree").setup({
                 disable_netrw = true,
