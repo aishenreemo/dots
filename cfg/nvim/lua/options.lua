@@ -3,6 +3,7 @@ local g = vim.g
 
 g.mapleader = " "
 g.encoding = "utf8"
+g.netrw_banner = 0
 
 opt.confirm = true
 opt.laststatus = 3
@@ -38,16 +39,28 @@ opt.whichwrap:append "<>[]hl"
 opt.fillchars = { eob = " " }
 opt.fillchars:append('vert:▕')
 
+opt.smartindent = true
+
+opt.wrap = false
+
+opt.swapfile = false
+opt.backup = false
+opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undofile = true
+
+opt.hlsearch = false
+opt.incsearch = true
+
+opt.scrolloff = 8
+opt.signcolumn = "yes"
+opt.isfname:append("@-@")
+
 local default_plugins = {
    "2html_plugin",
    "getscript",
    "getscriptPlugin",
    "gzip",
    "logipat",
-   "netrw",
-   "netrwPlugin",
-   "netrwSettings",
-   "netrwFileHandlers",
    "matchit",
    "tar",
    "tarPlugin",
