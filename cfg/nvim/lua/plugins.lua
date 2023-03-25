@@ -5,6 +5,7 @@ return require("packer").startup(function(use)
     use "nekonako/xresources-nvim"
     use "ThePrimeagen/harpoon"
     use "mbbill/undotree"
+    use "gpanders/editorconfig.nvim"
 
     use {
         "nvim-lualine/lualine.nvim",
