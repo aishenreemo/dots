@@ -28,7 +28,7 @@
         paru -S --needed \
             xorg-xinit xorg-server xorg-xsetroot \
             i3-gaps picom xdg-utils xorg-xrdb hsetroot \
-            alacritty zsh neovim rofi polybar xcb-util-xrm \
+            alacritty zsh rofi polybar xcb-util-xrm \
             dunst libnotify tesseract-data-eng gpick maim light \
             cmus peaclock cava unimatrix tmux # bin/music-player dependencies
         ```
@@ -84,7 +84,6 @@
         cp -r ./cfg/alacritty ~/.config
         cp -r ./cfg/dunst     ~/.config
         cp -r ./cfg/i3        ~/.config # requires xresources
-        cp -r ./cfg/nvim      ~/.config # requires xresources
         cp -r ./cfg/polybar   ~/.config # requires xresources
         cp -r ./cfg/rofi      ~/.config
         ```
