@@ -29,6 +29,7 @@
     alternate-normal-foreground: @fg;
     selected-normal-background: @fg;
     selected-normal-foreground: @bg;
+    font: "Hack 12";
 }
 
 configuration {
