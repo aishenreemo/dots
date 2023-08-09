@@ -3,7 +3,7 @@
 </div>
 
 ![](assets/preview.png)
-[previous rice](https://github.com/aishenreemo/dots/tree/ba19d3fc0e2dbaa752db99e845eea98ebf14c4ad)
+[previous rice](https://github.com/aishenreemo/dots/tree/1e732ef954dbd08ffe519d8f11ac1a0596d500d9)
 
 ## <samp>installation</samp>
 1. Clone the repository using `git`.
