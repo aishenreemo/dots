@@ -3,7 +3,6 @@
 </div>
 
 ![](assets/preview.png)
-[previous rice](https://github.com/aishenreemo/dots/tree/1e732ef954dbd08ffe519d8f11ac1a0596d500d9)
 
 ## <samp>installation</samp>
 1. Clone the repository using `git`.
@@ -115,6 +114,16 @@
         ```
 
 5. Reboot, login then run `startx`.
+
+## <samp>installing my old configuration</samp>
+> Just perform a `git checkout <COMMIT_HASH>` then follow the instructions on `readme` after cloning the repository.
+
+Here's a list of my archived old configurations.
+1. I am, We are. [1e732ef](https://github.com/aishenreemo/dots/tree/1e732ef954dbd08ffe519d8f11ac1a0596d500d9).
+2. Bocchi the Rock [ba19d3f](https://github.com/aishenreemo/dots/tree/ba19d3fc0e2dbaa752db99e845eea98ebf14c4ad).
+3. Tuyudots v3 [db8d830](https://github.com/aishenreemo/dots/tree/db8d83053b5d02dc80ba933cc9417e98ed4d1054).
+4. Tuyudots ft. Bus-chan [aca10b8](https://github.com/aishenreemo/dots/tree/aca10b83db5cbdf545f2f0e738a347d2a0358489).
+5. Tuyu with themes [cbe76cc](https://github.com/aishenreemo/dots/tree/cbe76cc88a14ee0d4a1256bc95919396c5461a12).
 
 ## <samp>acknowledgements</samp>
 
