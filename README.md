@@ -119,4 +119,4 @@
 ## <samp>acknowledgements</samp>
 
 - [janleigh](https://github.com/janleigh) (colorscheme)
-- [omu](https://twitter.com/omrice4869/status/1627631652309721089?s=20) (wallpaper)
+- [t_oo_r_oo](https://www.instagram.com/t_oo_r_oo/) (wallpaper)
