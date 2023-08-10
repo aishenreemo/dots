@@ -23,3 +23,6 @@
 *.color13:	#cb92f2
 *.color14:	#7fc8db
 *.color15:	#cccccc
+
+Xcursor.theme:  Bibata-Modern-Classic
+Xcursor.size: 16

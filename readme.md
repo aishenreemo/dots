@@ -43,6 +43,7 @@
     mkdir -p ~/.cache/
     mkdir -p ~/.local/bin/
     mkdir -p ~/.local/share/fonts
+    mkdir -p ~/.local/share/icons
     ```
 
 4. Copy configuration files to their respective paths.
@@ -69,6 +70,19 @@
         ```
         </details>
 
+    - Icons
+        ```sh
+        cp -r ./etc/icons/* ~/.local/share/icons
+        ```
+
+        <details>
+        <summary>expand</summary>
+
+        ```sh
+        cp -r ./etc/icons/Bibata-Modern-Classic/ ~/.local/share/icons/
+        ```
+        </details>
+
     - Configuration files
         ```sh
         cp -r ./cfg/* ~/.config
@@ -86,6 +100,7 @@
         cp -r ./cfg/rofi      ~/.config
         ```
         </details>
+
 
     - Binaries
         ```sh
