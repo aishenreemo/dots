@@ -144,15 +144,15 @@
 
 [urgency_low]
     background = "#0B0F10"
-    foreground = "#cbe3e7"
+    foreground = "#CBE3E7"
     timeout = 7
 
 [urgency_normal]
     background = "#0B0F10"
-    foreground = "#cbe3e7"
+    foreground = "#CBE3E7"
     timeout = 7
 
 [urgency_critical]
     background = "#0B0F10"
-    foreground = "#cbe3e7"
+    foreground = "#CBE3E7"
     timeout = 7
