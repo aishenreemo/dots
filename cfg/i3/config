@@ -46,7 +46,7 @@ set_from_resource $c14 i3wm.color14 #7FC8DB
 set_from_resource $c15 i3wm.color15 #CCCCCC
 
 set $terminal alacritty
-set $browser firefox
+set $browser google-chrome-stable
 
 # class                 border  backgr. text    indicator child_border
 client.focused          $c0     $bg     $c7     $c2       $bg
