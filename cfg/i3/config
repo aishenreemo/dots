@@ -26,24 +26,24 @@ set $alt Mod1
 set $ctrl Control
 set $shift Shift
 
-set_from_resource $bg i3wm.background #000000
-set_from_resource $fg i3wm.foreground #000000
-set_from_resource $c0 i3wm.color0 #000000
-set_from_resource $c1 i3wm.color1 #000000
-set_from_resource $c2 i3wm.color2 #000000
-set_from_resource $c3 i3wm.color3 #000000
-set_from_resource $c4 i3wm.color4 #000000
-set_from_resource $c5 i3wm.color5 #000000
-set_from_resource $c6 i3wm.color6 #000000
-set_from_resource $c7 i3wm.color7 #000000
-set_from_resource $c8 i3wm.color8 #000000
-set_from_resource $c9 i3wm.color9 #000000
-set_from_resource $c10 i3wm.color10 #000000
-set_from_resource $c11 i3wm.color11 #000000
-set_from_resource $c12 i3wm.color12 #000000
-set_from_resource $c13 i3wm.color13 #000000
-set_from_resource $c14 i3wm.color14 #000000
-set_from_resource $c15 i3wm.color15 #000000
+set_from_resource $bg i3wm.background #0B0F10
+set_from_resource $fg i3wm.foreground #C5C8C9
+set_from_resource $c0 i3wm.color0 #131718
+set_from_resource $c1 i3wm.color1 #DF5B61
+set_from_resource $c2 i3wm.color2 #87C7A1
+set_from_resource $c3 i3wm.color3 #DE8F78
+set_from_resource $c4 i3wm.color4 #6791C9
+set_from_resource $c5 i3wm.color5 #BC83E3
+set_from_resource $c6 i3wm.color6 #70B9CC
+set_from_resource $c7 i3wm.color7 #C4C4C4
+set_from_resource $c8 i3wm.color8 #151A1C
+set_from_resource $c9 i3wm.color9 #EE6A70
+set_from_resource $c10 i3wm.color10 #96D6B0
+set_from_resource $c11 i3wm.color11 #FFB29B
+set_from_resource $c12 i3wm.color12 #7BA5DD
+set_from_resource $c13 i3wm.color13 #CB92F2
+set_from_resource $c14 i3wm.color14 #7FC8DB
+set_from_resource $c15 i3wm.color15 #CCCCCC
 
 set $terminal alacritty
 set $browser firefox
