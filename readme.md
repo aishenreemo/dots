@@ -2,7 +2,7 @@
     <h1><i><samp>dots</samp></i></h1>
 </div>
 
-![](assets/preview.png)
+![](preview.png)
 
 ## <samp>installation</samp>
 1. Clone the repository using `git`.
