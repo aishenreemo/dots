@@ -1,10 +1,40 @@
-<div align="center">
-    <h1><i><samp>dots</samp></i></h1>
-</div>
+# dots
+> A well-tailored working environment isn't just a luxury – it's a key ingredient for boosting productivity.
+
+Hello! These are my dotfiles, AKA how I personalize my computer.
 
 ![](preview.png)
 
-## <samp>installation</samp>
+My Linux journey began in 2022, and as a programmer, it was a delightful experience.
+Using the Linux landscape, I swiftly adopted a mindset of honing in on what truly counts. 
+
+## software
+- [Arch Linux](https://archlinux.org/): Operating System
+- [X11](https://en.wikipedia.org/wiki/X_Window_System): Window System
+- [i3-gaps](https://github.com/Airblader/i3): Window Manager
+- [polybar](https://github.com/polybar/polybar): Status Bar
+- [dunst](https://github.com/dunst-project/dunst): Notification Daemon 
+- [picom](https://github.com/yshui/picom): Compositor
+- [neovim](https://neovim.io/): Text Editor
+- [alacritty](https://github.com/alacritty/alacritty): Terminal
+- [rofi](https://github.com/davatorium/rofi): Application Launcher
+
+## fonts
+Fonts that are included in this repository. `etc/fonts`
+- [Hack](https://github.com/source-foundry/Hack)
+- [Material Design Icons](https://github.com/google/material-design-icons)
+
+## icons (cursor)
+Icons that are included in this repository. `etc/icons`
+- [Bibata](https://github.com/ful1e5/Bibata_Cursor)
+
+## installation
+
+### automatic
+If you want to install everything then run the script `install.sh`. Take note that it will override existing configurations and only recommend on a freshly installed OS. You still have to install required dependencies with a package manager.
+
+
+### manual
 1. Clone the repository using `git`.
     ```sh
     git clone https://github.com/aishenreemo/dots
@@ -130,17 +160,14 @@
 
 5. Reboot, login then run `startx`.
 
-## <samp>installing my old configuration</samp>
-> Just perform a `git checkout <COMMIT_HASH>` then follow the instructions on `readme` after cloning the repository.
-
+## old configurations
 Here's a list of my archived old configurations.
-1. I am, We are. [1e732ef](https://github.com/aishenreemo/dots/tree/1e732ef954dbd08ffe519d8f11ac1a0596d500d9).
-2. Bocchi the Rock [ba19d3f](https://github.com/aishenreemo/dots/tree/ba19d3fc0e2dbaa752db99e845eea98ebf14c4ad).
-3. Tuyudots v3 [db8d830](https://github.com/aishenreemo/dots/tree/db8d83053b5d02dc80ba933cc9417e98ed4d1054).
-4. Tuyudots ft. Bus-chan [aca10b8](https://github.com/aishenreemo/dots/tree/aca10b83db5cbdf545f2f0e738a347d2a0358489).
-5. Tuyu with themes [cbe76cc](https://github.com/aishenreemo/dots/tree/cbe76cc88a14ee0d4a1256bc95919396c5461a12).
+1. [`1e732ef`](https://github.com/aishenreemo/dots/tree/1e732ef954dbd08ffe519d8f11ac1a0596d500d9) I am, We are.
+2. [`ba19d3f`](https://github.com/aishenreemo/dots/tree/ba19d3fc0e2dbaa752db99e845eea98ebf14c4ad) Bocchi the Rock.
+3. [`db8d830`](https://github.com/aishenreemo/dots/tree/db8d83053b5d02dc80ba933cc9417e98ed4d1054) Tuyudots v3.
+4. [`aca10b8`](https://github.com/aishenreemo/dots/tree/aca10b83db5cbdf545f2f0e738a347d2a0358489) Tuyudots ft. Bus-chan .
+5. [`cbe76cc`](https://github.com/aishenreemo/dots/tree/cbe76cc88a14ee0d4a1256bc95919396c5461a12) Tuyu with themes.
 
-## <samp>acknowledgements</samp>
-
+## acknowledgements
 - [janleigh](https://github.com/janleigh) (colorscheme)
 - [t_oo_r_oo](https://www.instagram.com/t_oo_r_oo/) (wallpaper)
