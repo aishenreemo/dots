@@ -70,8 +70,8 @@ bindsym $mod+i exec --no-startup-id imgtotxt
 bindsym Print exec --no-startup-id maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png
 
 # audio
-bindsym $mod+minus exec pactl -- set-sink-volume 0 -5%
-bindsym $mod+equal exec pactl -- set-sink-volume 0 +5%
+bindsym $mod+minus exec --no-startup-id pactl -- set-sink-volume 0 -5%
+bindsym $mod+equal exec --no-startup-id pactl -- set-sink-volume 0 +5%
 
 # kill focused window
 bindsym $mod+c kill
