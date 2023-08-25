@@ -67,7 +67,7 @@ bindsym $mod+a exec --no-startup-id rofi -disable-history -modi "drun" -show "dr
 bindsym $mod+Return exec --no-startup-id $terminal
 bindsym $mod+b exec --no-startup-id $browser
 bindsym $mod+i exec --no-startup-id imgtotxt
-bindsym Print exec --no-startup-id maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png
+bindsym Print exec --no-startup-id maim -s -u --format png /dev/stdout | xclip -selection clipboard -t image/png
 
 # audio
 bindsym $mod+minus exec --no-startup-id pactl -- set-sink-volume 0 -5%
