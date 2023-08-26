@@ -1,7 +1,4 @@
-# If you come from bash you might have to change your $PATH.
 export PATH="$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
-
-# Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -70,7 +67,11 @@ ZSH_THEME="cypher"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git 
+    sudo 
+    last-working-dir
+)
 
 source $ZSH/oh-my-zsh.sh
 
