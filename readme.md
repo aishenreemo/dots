@@ -71,29 +71,29 @@ mkdir -p ~/.local/share/icons
 5. Copy configuration files to their respective paths.
 - Fonts
 ```sh
-cp -r ./etc/fonts/* ~/.local/share/fonts
+cp -r dots/etc/fonts/* ~/.local/share/fonts
 fc-cache -v
 ```
 
 - Icons
 ```sh
-cp -r ./etc/icons/* ~/.local/share/icons
+cp -r dots/etc/icons/* ~/.local/share/icons
 ```
 
 - Configuration files
 ```sh
-cp -r ./cfg/* ~/.config
+cp -r dots/cfg/* ~/.config
 ```
 
 - Binaries
 ```sh
-cp ./bin/* ~/.local/bin
+cp dots/bin/* ~/.local/bin
 ```
 
 - Misc
 
 ```sh
-cp ./etc/misc/.{zshrc,xinitrc,Xresources} ~
+cp dots/etc/misc/.{zshrc,xinitrc,Xresources} ~
 ```
 
 6. Reboot, login then run `startx`.
