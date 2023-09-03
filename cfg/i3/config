@@ -5,7 +5,6 @@ font pango:Hack 8
 exec --no-startup-id hsetroot -cover "$HOME/.config/i3/wallpaper.jpg"
 exec --no-startup-id picom --config "$HOME/.config/picom.conf"
 exec --no-startup-id "$HOME/.config/polybar/launch.sh"
-exec --no-startup-id plover -g none
 exec --no-startup-id dunst
 
 # gaps
@@ -65,7 +64,6 @@ focus_follows_mouse no
 
 # programs
 bindsym $mod+a exec --no-startup-id rofi -disable-history -modi "drun" -show "drun"
-bindsym $mod+p exec --no-startup-id plover_send_command toggle
 bindsym $mod+Return exec --no-startup-id $terminal
 bindsym $mod+b exec --no-startup-id $browser
 bindsym $mod+i exec --no-startup-id imgtotxt
