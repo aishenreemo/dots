@@ -100,11 +100,12 @@ cp dots/etc/misc/.{zshrc,xinitrc,Xresources} ~
 
 ## old configurations
 Here's a list of my archived old configurations.
-1. [`1e732ef`](https://github.com/aishenreemo/dots/tree/1e732ef954dbd08ffe519d8f11ac1a0596d500d9) I am, We are.
-2. [`ba19d3f`](https://github.com/aishenreemo/dots/tree/ba19d3fc0e2dbaa752db99e845eea98ebf14c4ad) Bocchi the Rock.
-3. [`db8d830`](https://github.com/aishenreemo/dots/tree/db8d83053b5d02dc80ba933cc9417e98ed4d1054) Tuyudots v3.
-4. [`aca10b8`](https://github.com/aishenreemo/dots/tree/aca10b83db5cbdf545f2f0e738a347d2a0358489) Tuyudots ft. Bus-chan .
-5. [`cbe76cc`](https://github.com/aishenreemo/dots/tree/cbe76cc88a14ee0d4a1256bc95919396c5461a12) Tuyu with themes.
+1. [`166c937`](https://github.com/aishenreemo/dots/tree/166c937985d566ce8c61797946d6442beab4638c) t_oo_r_oo.
+2. [`1e732ef`](https://github.com/aishenreemo/dots/tree/1e732ef954dbd08ffe519d8f11ac1a0596d500d9) I am, We are.
+3. [`ba19d3f`](https://github.com/aishenreemo/dots/tree/ba19d3fc0e2dbaa752db99e845eea98ebf14c4ad) Bocchi the Rock.
+4. [`db8d830`](https://github.com/aishenreemo/dots/tree/db8d83053b5d02dc80ba933cc9417e98ed4d1054) Tuyudots v3.
+5. [`aca10b8`](https://github.com/aishenreemo/dots/tree/aca10b83db5cbdf545f2f0e738a347d2a0358489) Tuyudots ft. Bus-chan .
+6. [`cbe76cc`](https://github.com/aishenreemo/dots/tree/cbe76cc88a14ee0d4a1256bc95919396c5461a12) Tuyu with themes.
 
 ## acknowledgements
 - [janleigh](https://github.com/janleigh) (colorscheme)
