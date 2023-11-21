@@ -55,8 +55,8 @@ cd paru-bin && makepkg -si
 ```sh
 paru -S --needed \
     base-devel xorg-xinit xorg-server xorg-xsetroot xorg-xrdb xdg-utils xcb-util-xrm \
-    i3-gaps polybar rofi dunst libnotify picom hsetroot alacritty zsh oh-my-zsh \
-    maim tesseract-data-eng light pipewire-pulse pavucontrol google-chrome iwd dhcpcd
+    i3-gaps polybar rofi dunst libnotify picom hsetroot alacritty zsh oh-my-zsh-git \
+    maim tesseract-data-eng light pipewire-pulse google-chrome iwd dhcpcd xclip xorg-xrandr
 ```
 
 4. Initialize directories.
