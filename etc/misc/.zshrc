@@ -1,5 +1,6 @@
-export PATH="$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
-export ZSH="$HOME/.oh-my-zsh"
+export PATH="$HOME/.cargo/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
+export ZSH="/usr/share/oh-my-zsh"
+export EDITOR="nvim"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
