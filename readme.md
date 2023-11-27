@@ -109,4 +109,4 @@ Here's a list of my archived old configurations.
 
 ## acknowledgements
 - [janleigh](https://github.com/janleigh) (colorscheme)
-- [t_oo_r_oo](https://www.instagram.com/t_oo_r_oo/) (wallpaper)
+- [shanopirika](https://www.instagram.com/shanopirika) (wallpaper)
