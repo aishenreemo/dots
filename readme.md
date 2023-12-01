@@ -36,9 +36,6 @@ Icons that are included in this repository. `etc/icons`
 
 ## installation
 
-### automatic
-If you want to install everything then run the script `install.sh`. Take note that it will override existing configurations. You still have to install required dependencies with a package manager.
-
 ### manual
 1. Clone the repository using `git`.
 ```sh
@@ -95,6 +92,8 @@ cp dots/bin/* ~/.local/bin
 ```sh
 cp dots/etc/misc/.{zshrc,xinitrc,Xresources} ~
 ```
+
+> Run `install.sh` if you are lazy to copy the files into their respective directories. This will override existing configurations so be careful!
 
 6. Reboot, login then run `startx`.
 
