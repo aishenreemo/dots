@@ -64,7 +64,8 @@ focus_follows_mouse no
 
 # programs
 bindsym $mod+a exec --no-startup-id rofi -disable-history -modi "drun" -show "drun"
-bindsym $mod+Return exec --no-startup-id $terminal
+bindsym $mod+Return exec --no-startup-id $terminal -e tmux
+bindsym $mod+Shift+Return exec --no-startup-id $terminal -e tmux attach
 bindsym $mod+b exec --no-startup-id $browser
 bindsym $mod+i exec --no-startup-id imgtotxt
 bindsym Print exec --no-startup-id maim -s -u --format png /dev/stdout | xclip -selection clipboard -t image/png
