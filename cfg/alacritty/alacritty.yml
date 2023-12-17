@@ -10,6 +10,7 @@ window:
   #position:
   #  x: 0
   #  y: 0
+  opacity: 0.9
   padding:
     x: 20
     y: 20
@@ -18,9 +19,9 @@ window:
   #startup_mode: Windowed
   #title: Alacritty
   #dynamic_title: true
-  #class:
-    #instance: Alacritty
-    #general: Alacritty
+  class:
+    instance: Alacritty
+    general: Alacritty
   #gtk_theme_variant: None
 
 #scrolling:
