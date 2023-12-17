@@ -64,11 +64,13 @@ focus_follows_mouse no
 
 # programs
 bindsym $mod+a exec --no-startup-id rofi -disable-history -modi "drun" -show "drun"
-bindsym $mod+Return exec --no-startup-id $terminal -e tmux
+bindsym $mod+Return exec --no-startup-id $terminal -e tmux 
 bindsym $mod+Shift+Return exec --no-startup-id $terminal -e tmux attach
 bindsym $mod+b exec --no-startup-id $browser
 bindsym $mod+i exec --no-startup-id imgtotxt
 bindsym Print exec --no-startup-id maim -s -u --format png /dev/stdout | xclip -selection clipboard -t image/png
+bindsym $mod+o exec --no-startup-id alacritty msg config window.opacity=0.9
+bindsym $mod+$shift+o exec --no-startup-id alacritty msg config window.opacity=1.0
 
 # audio
 bindsym $mod+minus exec --no-startup-id pactl -- set-sink-volume 0 -5%
