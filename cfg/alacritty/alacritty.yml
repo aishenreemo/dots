@@ -10,7 +10,7 @@ window:
   #position:
   #  x: 0
   #  y: 0
-  opacity: 0.9
+  opacity: 0.95
   padding:
     x: 20
     y: 20
