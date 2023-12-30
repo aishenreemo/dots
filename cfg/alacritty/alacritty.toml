@@ -1,0 +1,64 @@
+[colors.bright]
+black = "0x151A1C"
+blue = "0x7BA5DD"
+cyan = "0x7FC8DB"
+green = "0x96D6B0"
+magenta = "0xCB92F2"
+red = "0xEE6A70"
+white = "0xCCCCCC"
+yellow = "0xFFB29B"
+
+[colors.normal]
+black = "0x131718"
+blue = "0x6791C9"
+cyan = "0x70B9CC"
+green = "0x87C7A1"
+magenta = "0xBC83E3"
+red = "0xDF5B61"
+white = "0xC4C4C4"
+yellow = "0xDE8F78"
+
+[colors.primary]
+background = "0x0B0F10"
+foreground = "0xC5C8C9"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 11.0
+
+[font.bold]
+family = "Hack"
+style = "Bold"
+
+[font.bold_italic]
+family = "Hack"
+style = "Bold Italic"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "Hack"
+style = "Italic"
+
+[font.normal]
+family = "Hack"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[window]
+opacity = 0.9
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 20
+y = 20
