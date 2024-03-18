@@ -53,7 +53,7 @@ x = 0
 y = 0
 
 [window]
-opacity = 0.9
+opacity = 1
 
 [window.class]
 general = "Alacritty"
