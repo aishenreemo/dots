@@ -1,0 +1,76 @@
+#!/bin/sh
+
+super + b
+	firefox
+
+super + c
+	bspc node -c
+
+super + s
+	pkill -USR1 -x sxhkd \
+		&& pkill dunst \
+		&& pkill picom \
+                && $HOME/.config/bspwm/bspwmrc
+
+super + Return
+	alacritty
+
+super + i
+        imgtotxt
+
+super + shift + q
+	bspc quit
+
+super + a
+	rofi -show drun
+
+super + Tab
+        rofi -show window
+
+super + {ctrl +,shift + }Tab
+    bspc node -f {next,prev}.local.!hidden.window
+
+super + {_,shift + }{1-9}
+        bspc {desktop -f,node -d} '^{1-9}'
+
+# resize window
+super + alt + {Left,Down,Up,Right}
+        bspc node -z {right -1 0,top 0 1,bottom 0 -1,left 1 0}
+
+super + ctrl + {Left,Down,Up,Right}
+        bspc node -z {left -1 0,bottom 0 1,top 0 -1,right 1 0}
+
+super + shift + alt + {Left,Down,Up,Right}
+        bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
+
+super + shift + ctrl + {Left,Down,Up,Right}
+        bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 10 0}
+
+# move window 
+super + {Left,Down,Up,Right}
+        bspc node -v {-1 0,0 1,0 -1,1 0}
+
+super + shift + {Left,Down,Up,Right}
+        bspc node -v {-10 0,0 10,0 -10,10 0}
+
+# set window state
+super + {t,shift + t,space, f}
+        bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+XF86Sleep
+	systemctl suspend
+
+XF86PowerOff
+	systemctl shutdown
+
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86Audio{LowerVolume,RaiseVolume}
+	pactl set-sink-volume @DEFAULT_SINK@ {-5%, +5%}
+
+XF86MonBrightness{Down,Up}
+        brightnessctl s 5%{+,-}
+
+Print
+        maim -s -u --format png /dev/stdout | xclip -selection clipboard -t image/png

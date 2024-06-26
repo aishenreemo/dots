@@ -1,0 +1,26 @@
+! special
+*.background:    #0B0F10
+*.foreground:    #c5c8c9
+
+! normal
+*.color0:     #3D3838
+*.color1:     #D4515B
+*.color2:     #FFE8AF
+*.color3:     #E8C5AC
+*.color4:     #618592
+*.color5:     #FFA1A8
+*.color6:     #99B9D8
+*.color7:     #E1DECF
+
+! bright
+*.color8:     #4D4747
+*.color9:     #FA7781
+*.color10:    #FFF0CB
+*.color11:    #EFDCCC
+*.color12:    #8EA6B9
+*.color13:    #FDCBC5
+*.color14:    #C5E1FC
+*.color15:    #FFFCEE
+
+Xcursor.theme: BreezeX-RosePine-Linux
+Xcursor.size: 32
